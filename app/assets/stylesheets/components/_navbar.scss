@@ -1,12 +1,42 @@
-.navbar-lewagon {
+.home-nav{
+  display: flex;
   justify-content: space-between;
-  background: white;
+  height: fit-content;
+  background-color: #2C2829;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+#avatar{
   width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 8px;
+}
+
+.home-nav-list{
+  display: inline-flex;
+}
+
+.list-item{
+  list-style: none;
+  padding-left: 40px;
+  color: white;
+  font-size: 18px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+#sign-log-btn{
+  margin-left: 20px;
+  padding: 5px;
+  height: 28px;
+}
+
+.list-item:hover {
+  color: red;
+  transition: 1s;
 }
