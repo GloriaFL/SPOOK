@@ -5,7 +5,6 @@ class CreateDestinations < ActiveRecord::Migration[7.0]
       t.string :location
       t.string :category
       t.string :intensity
-      t.integer :review_id
 
       t.timestamps
     end
