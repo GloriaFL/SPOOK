@@ -6,37 +6,70 @@
 }
 
 #avatar{
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
   margin: 8px;
 }
 
 .home-nav-list{
   display: inline-flex;
+  margin-top: 30px;
 }
 
 .list-item{
   list-style: none;
   padding-left: 40px;
   color: white;
-  font-size: 18px;
-}
-
-.buttons{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-  margin-right: 10px;
-}
-
-#sign-log-btn{
-  margin-left: 20px;
-  padding: 5px;
-  height: 28px;
+  font-size: 30px;
 }
 
 .list-item:hover {
   color: red;
   transition: 1s;
+}
+
+.buttons{
+  margin-top: 30px;
+
+}
+
+.sign-log-btn{
+  margin: 0px 20px;
+  height: 30px;
+  font-size: 30px;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #2C2829;
+  color: white;
+  border: none;
+}
+
+#coche{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 8px;
+}
+
+
+
+
+#car-movement {
+  top: 58px;
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 5s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: 80px;
+  }
+  50% {
+    left: calc(20% - 80px); 
+   }
+  100% {
+    left: 100px;
+  }
 }
