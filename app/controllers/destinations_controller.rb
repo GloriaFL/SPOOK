@@ -1,4 +1,5 @@
 class DestinationsController < ApplicationController
+  before_action :set_destination, only: [:show, :edit, :update, :destroy]
 
   def index
     @destinations = Destination.all
@@ -6,6 +7,10 @@ class DestinationsController < ApplicationController
 
   def new
     @destination = Destination.new
+  end
+
+  def show
+    @destination = Destination.set_destination
   end
 
   def create
@@ -24,6 +29,6 @@ class DestinationsController < ApplicationController
   end
 
   def review_params
-    params.require(:destination).permit(:content)
+    params.require(:destination).permit(:content, :price, :location, :category, :intensity)
   end
 end
