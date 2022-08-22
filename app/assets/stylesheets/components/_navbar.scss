@@ -1,22 +1,22 @@
-nav{
+.home-nav{
   display: flex;
   justify-content: space-between;
   height: fit-content;
   background-color: #2C2829;
 }
 
-img{
+#avatar{
   width: 40px;
   height: 40px;
   border-radius: 100%;
   margin: 8px;
 }
 
-ul{
+.home-nav-list{
   display: inline-flex;
 }
 
-li{
+.list-item{
   list-style: none;
   padding-left: 40px;
   color: white;
@@ -30,13 +30,13 @@ li{
   margin-right: 10px;
 }
 
-button{
+#sign-log-btn{
   margin-left: 20px;
   padding: 5px;
   height: 28px;
 }
 
-li:hover {
+.list-item:hover {
   color: red;
   transition: 1s;
 }
