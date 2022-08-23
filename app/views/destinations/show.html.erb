@@ -1,3 +1,12 @@
 <h2><%= @destination.name %></h2>
-<p>Info</p>
-<%= link_to "Back to all destinations", destination_path %>
+<p><%= @destination.category %></p>
+<p><%= @destination.location %></p>
+<p><%= @destination.intensity %></p>
+<p><%= @destination.price %></p>
+
+<%= link_to "Delete",
+    destination_path(@destination),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+<%= link_to "Edit", edit_destination_path(@destination) %>
+<%= link_to "Back to all destinations", destinations_path %>
