@@ -5,7 +5,7 @@
   background-color: #2C2829;
 }
 
-#avatar{
+.avatar{
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -45,7 +45,7 @@
   border: none;
 }
 
-#coche{
+.coche{
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -53,10 +53,8 @@
 }
 
 
-
-
 #car-movement {
-  top: 58px;
+  top: 45px;
   position: absolute;
   -webkit-animation: linear infinite;
   -webkit-animation-name: run;
@@ -67,7 +65,7 @@
     left: 80px;
   }
   50% {
-    left: calc(20% - 80px); 
+    left: calc(20% - 80px);
    }
   100% {
     left: 100px;
