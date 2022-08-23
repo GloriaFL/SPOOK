@@ -1,8 +1,28 @@
-<h1>Categories</h1>
-
-<% categories = ["Haunted Houses", "Cemeteries", "Abandoned Prisons", "UFO", "Deserted Islands"] %>
-<div class="categories">
-  <% categories.each do |category| %>
-    <div class="card-category"><%= category %> </div>
-  <% end %>
+<div id="container">
+<div class="categories-h1"> <h1>Categories</h1>
+</div>
+  <div id="slider-container">
+    <span onclick="slideRight()" class="btn"></span>
+      <div id="slider">
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://placesjournal.org/wp-content/uploads/2013/10/Eggener-Haunted-01-1020x617.jpg)">
+          <span>Haunted Houses</span>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.toiimg.com/photo/msid-92548663,width-96,height-65.cms)">
+          <span>Cemeteries</span>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.dezeen.com/uploads/2017/02/childrens-insane-ward-matt-van-der-velde-architecture-abandoned-asylums-interior-jonglez-publishing_h-sq_dezeen_2364_col_0.jpg)">
+          <span>Abandoned Building<span>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://nypost.com/wp-content/uploads/sites/2/2018/10/ufo-sightings-roundup-1.jpg?quality=75&strip=all&w=744)">
+          <span>UFO</span>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.nationthailand.com/images/news/2020/08/15/30393014/800_b3c3010a9c60008.jpg?v=1597468066)">
+          <span>Deserted Islands</span>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.cbs17.com/wp-content/uploads/sites/29/2021/09/ghost-stairs.jpg?w=800)">
+          <span>Ghosts</span>
+        </div>
+    </div>
+    <span onclick="slideLeft()" class="btn"></span>
+  </div>
 </div>
