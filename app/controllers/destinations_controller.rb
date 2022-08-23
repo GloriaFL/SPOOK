@@ -23,7 +23,7 @@ class DestinationsController < ApplicationController
     @destination = Destination.find(params[:id])
   end
 
-  def review_params
+  def destination_params
     params.require(:destination).permit(:content)
   end
 end
