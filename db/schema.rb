@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_23_132030) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_destinations_on_user_id"
   end
 
