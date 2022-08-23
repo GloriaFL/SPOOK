@@ -31,5 +31,3 @@ Destination.create!([{ name: "Dracula's Castle",
   price: "200"}])
 
 puts "seeds done"
-
-#Character.create(name: "Luke", movie: movies.first)
