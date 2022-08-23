@@ -1,4 +1,5 @@
 class DestinationsController < ApplicationController
+  before_action :set_destination, only: [:show, :edit, :update, :destroy]
 
   def index
     @destinations = Destination.all
@@ -6,6 +7,9 @@ class DestinationsController < ApplicationController
 
   def new
     @destination = Destination.new
+  end
+
+  def show
   end
 
   def create
@@ -17,6 +21,22 @@ class DestinationsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @destination.update(destination_params)
+      redirect_to destination_path(@destination)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @destination.destroy
+    redirect_to destinations_path, status: :see_other
+  end
+
   private
 
   def set_destination
@@ -24,6 +44,6 @@ class DestinationsController < ApplicationController
   end
 
   def destination_params
-    params.require(:destination).permit(:content)
+    params.require(:destination).permit(:name, :price, :location, :category, :intensity)
   end
 end
