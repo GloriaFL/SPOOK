@@ -4,6 +4,13 @@
 <p><%= @destination.intensity %></p>
 <p><%= @destination.price %></p>
 
+<%= simple_form_for [@destination, @booking] do |f| %>
+  <%= f.input :date_start %>
+  <%= f.input :date_end %>
+  <%= f.input :number_people %>
+  <%= f.submit %>
+<% end %>
+
 <%= link_to "Delete",
     destination_path(@destination),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}

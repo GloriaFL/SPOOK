@@ -4,9 +4,8 @@ class PagesController < ApplicationController
   def home
   end
 
-  def profile
-    @booking = Booking.all
-    @destination = Destination.find(params[:booking_id])
-    @booking.destination = @destination
-  end
+  # def profile
+  #   @bookings = Booking.all
+  #   @destinations = Destination.all
+  # end
 end

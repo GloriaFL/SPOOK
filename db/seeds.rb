@@ -10,24 +10,28 @@ Destination.create!([{ name: "Halloween Town",
   category: "Villages",
   location: "England",
   intensity: "Creepy",
-  price: "100"}])
+  price: "100",
+  user_id: 1}])
 
 Destination.create!([{ name: "Area 51",
   category: "UFO",
   location: "USA",
   intensity: "Super Spooky",
-  price: "300"}])
+  price: "300",
+  user_id: 1}])
 
 Destination.create!([{ name: "Adam's Mansion",
   category: "Hunted House",
   location: "USA",
   intensity: "hair-raising",
-  price: "100"}])
+  price: "100",
+  user_id: 1}])
 
 Destination.create!([{ name: "Dracula's Castle",
   category: "Hunted House",
   location: "Pensilvania",
   intensity: "hair-raising",
-  price: "200"}])
+  price: "200",
+  user_id: 1}])
 
 puts "seeds done"
