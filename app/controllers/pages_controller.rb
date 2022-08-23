@@ -8,6 +8,5 @@ class PagesController < ApplicationController
     @booking = Booking.all
     @destination = Destination.find(params[:booking_id])
     @booking.destination = @destination
-    raise
   end
 end
