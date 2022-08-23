@@ -2,6 +2,36 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+
+Destination.destroy_all
+
+puts "creating seeds..."
+Destination.create!([{ name: "Halloween Town",
+  category: "Villages",
+  location: "England",
+  intensity: "Creepy",
+  price: "100",
+  user_id: 1}])
+
+Destination.create!([{ name: "Area 51",
+  category: "UFO",
+  location: "USA",
+  intensity: "Super Spooky",
+  price: "300",
+  user_id: 1}])
+
+Destination.create!([{ name: "Adam's Mansion",
+  category: "Hunted House",
+  location: "USA",
+  intensity: "hair-raising",
+  price: "100",
+  user_id: 1}])
+
+Destination.create!([{ name: "Dracula's Castle",
+  category: "Hunted House",
+  location: "Pensilvania",
+  intensity: "hair-raising",
+  price: "200",
+  user_id: 1}])
+
+puts "seeds done"
