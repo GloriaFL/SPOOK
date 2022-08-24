@@ -22,4 +22,16 @@
       </div>
     <% end %>
   </div>
+
+<h1>Index :D</h1>
+<ul>
+  <% @destinations.each do |destination| %>
+    <li><%= link_to destination.name, destination_path(destination) %></li>
+  <% end %>
+</ul>
+
+<div style="width: 80%; height: 500px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
