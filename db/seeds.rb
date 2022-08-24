@@ -265,7 +265,7 @@ Destination.create!([{ name: "Roswell",
   category: "UFOs",
   location: "United States",
   intensity: "Eerie",
-  description: "aaaaaaaaaaaaaa",
+  description: "aaaaaaaaaaaaaaaaaa",
   price: "4,000",
   user_id: 1
   }])
