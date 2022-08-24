@@ -8,7 +8,7 @@ class Destination < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
   #------------------------------#
 
-  TYPES = ['Haunted Houses', 'UFO', 'Cementeries', 'Islands', 'Ghosts']
+  TYPES = ['Haunted Houses', 'UFOs', 'Cementeries', 'Islands', 'Ghosts', 'Prisons', 'Castles', 'Hotels']
 
   validates :name, uniqueness: true, presence: true
   validates :description, presence: true, length: { minimum: 20 }
