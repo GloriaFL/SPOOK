@@ -20,12 +20,9 @@ class DestinationsController < ApplicationController
     @destination = Destination.new
   end
 
-  def show
-    @booking = Booking.new
-  end
-
   def create
     @destination = Destination.new(destination_params)
+    @destination.user = current_user
     if @destination.save
       redirect_to destination_path(@destination)
     else
@@ -34,6 +31,10 @@ class DestinationsController < ApplicationController
   end
 
   def edit
+  end
+
+  def show
+    @booking = Booking.new
   end
 
   def update
@@ -56,6 +57,6 @@ class DestinationsController < ApplicationController
   end
 
   def destination_params
-    params.require(:destination).permit(:name, :price, :location, :category, :intensity)
+    params.require(:destination).permit(:name, :price, :location, :category, :intensity, :description)
   end
 end
