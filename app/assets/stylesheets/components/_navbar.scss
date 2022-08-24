@@ -4,17 +4,32 @@
   display: flex;
   justify-content: space-between;
   height: fit-content;
-  background-color: rgba(36, 36, 36, 0.8);
+  background-color: rgba(36, 36, 36, 0.1);
   position: absolute;
   width: 100vw;
   max-width: 100%;
+  z-index: 1000;
 }
 
-.avatar{
+.logo {
   width: 80px;
   height: 80px;
   border-radius: 100%;
   margin: 8px;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-color: blue;
+  position: absolute;
+  top:0px;
+  right:0px;
 }
 
 .home-nav-list{
@@ -38,30 +53,4 @@
 
 .buttons{
   margin-top: 30px;
-}
-
-.coche{
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  margin: 8px;
-}
-
-#car-movement {
-  top: 45px;
-  position: absolute;
-  -webkit-animation: linear infinite;
-  -webkit-animation-name: run;
-  -webkit-animation-duration: 5s;
-}
-@-webkit-keyframes run {
-  0% {
-    left: 80px;
-  }
-  50% {
-    left: calc(20% - 80px);
-   }
-  100% {
-    left: 100px;
-  }
 }
