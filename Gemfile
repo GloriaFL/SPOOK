@@ -31,6 +31,8 @@ gem "jbuilder"
 
 gem "devise"
 
+gem "geocoder"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -48,9 +50,6 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
-
-# Pundit: An authorization gem for Rails https://github.com/varvet/pundit
-gem "pundit"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

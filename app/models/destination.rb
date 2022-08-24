@@ -3,7 +3,12 @@ class Destination < ApplicationRecord
   has_many :bookings
   has_many :reviews, through: :bookings
 
-  TYPES = ['Haunted Houses', 'UFO', 'Cemeteries', 'Islands', 'Ghosts']
+  # Dani: Geocode
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+  #------------------------------#
+
+  TYPES = ['Haunted Houses', 'UFO', 'Cementeries', 'Islands', 'Ghosts']
 
   validates :name, uniqueness: true, presence: true
   validates :description, presence: true, length: { minimum: 20 }
