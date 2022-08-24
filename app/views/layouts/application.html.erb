@@ -7,15 +7,20 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+    </style>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&display=swap');
+    </style>
   </head>
 
   <body>
     <%= render "shared/navbar" %>
-    <%= render "shared/banner" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render "shared/flashes" %>
     <%= yield %>
     <%= render "shared/footer" %>
