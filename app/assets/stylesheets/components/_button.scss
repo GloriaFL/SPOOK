@@ -1,0 +1,21 @@
+.sign-log-btn{
+  margin: 0px 20px;
+  height: 30px;
+  font-size: 20px;
+  height: 40px;
+  background-color: rgba(36, 36, 36, 0.8);
+  color: #8D0711;
+  transition: 0.25s;
+  border-style: solid;
+  border-color: #8D0711;
+  &:hover,
+  &:focus {
+    color: #8D0711;
+  }
+}
+
+// Size can also be negative; see how it's smaller than the element
+.sign-log-btn:hover {
+  box-shadow: 0 0.8em 0.8em -0.6em #8D0711;
+  transform: translateY(-0.25em);
+}
