@@ -9,7 +9,9 @@ class DestinationsController < ApplicationController
     @markers = @destinations.geocoded.map do |destination|
       {
         lat: destination.latitude,
-        lng: destination.longitude
+        lng: destination.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {destination: destination}),
+        image_url: helpers.asset_url("haunted_house.png")
       }
     end
   end
