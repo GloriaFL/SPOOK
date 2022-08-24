@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :destinations, dependent: :destroy
   has_many :reviews, through: :bookings
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :first_name, presence: true, length: { minimum: 2 }
+  validates :last_name, presence: true, length: { minimum: 2 }
 end
