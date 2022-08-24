@@ -22,9 +22,9 @@
   <%= f.submit %>
 <% end %>
 
-<p><%= link_to "Delete",
+<%= link_to "Delete",
     destination_path(@destination),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %></p>
+  %>
 <%= link_to "Edit", edit_destination_path(@destination) %>
 <%= link_to "Back to all destinations", destinations_path %>
