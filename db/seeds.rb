@@ -272,3 +272,7 @@ Destination.create!([{ name: "Roswell",
 
 
 puts "seeds done"
+
+# GJORIJFIOJFOIWRJFROJFOEWRFJOIRFOIRIFJOIFJIORJWEFñsd,fñdlfdñfsñ
+
+
