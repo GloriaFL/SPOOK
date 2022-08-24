@@ -1,0 +1,14 @@
+<h1>This is our profile page</h1>
+<div class="cards">
+  <% @bookings.each do |booking| %>
+    <div class="card-trip">
+      <%= booking.number_people %>
+      <% destination = Destination.find(booking.destination_id) %>
+      <%= destination.name %>
+      <%= destination.price %>
+      <%= destination.location %>
+      <%= destination.category %>
+      <%= destination.intensity %>
+    </div>
+  <% end %>
+</div>

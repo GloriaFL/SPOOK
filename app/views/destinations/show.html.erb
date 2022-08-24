@@ -1,0 +1,19 @@
+<h2><%= @destination.name %></h2>
+<p><%= @destination.category %></p>
+<p><%= @destination.location %></p>
+<p><%= @destination.intensity %></p>
+<p><%= @destination.price %></p>
+
+<%= simple_form_for [@destination, @booking] do |f| %>
+  <%= f.input :date_start %>
+  <%= f.input :date_end %>
+  <%= f.input :number_people %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Delete",
+    destination_path(@destination),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+<%= link_to "Edit", edit_destination_path(@destination) %>
+<%= link_to "Back to all destinations", destinations_path %>
