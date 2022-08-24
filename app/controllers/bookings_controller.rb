@@ -1,25 +1,20 @@
 class BookingsController < ApplicationController
-  before_action :set_destination, only: %i[new create]
+  before_action :set_destination, only: %i[new create edit]
 
   def index
     @bookings = Booking.all
-  end
-
-  def show
-    @booking = Booking.find(params[:id])
-  end
-
-  def new
-    @booking = Booking.new
+    @destinations = Destination.all
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.destination = @destination
     if @booking.save
-      redirect_to destination_path(@destination)
+      redirect_to profile_path(@user)
     else
-      render :new, status: :unprocessable_entity
+      redirect_to profile_path(@user), status: :unprocessable_entity
+      # We could not figure out how to render the show for the destinations controller.
     end
   end
 
@@ -31,6 +26,7 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @booking.destination = @destination
   end
 
   def update
