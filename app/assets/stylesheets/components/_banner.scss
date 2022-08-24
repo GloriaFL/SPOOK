@@ -1,97 +1,163 @@
-* {
-  font-family: 'Roboto', sans-serif;
-}
 body {
   margin:0;
   padding:0;
-  background: #000;
   height: 100vh;
+  max-width: 100%;
+
 }
+
+.banner{
+  background-image: url("https://res.cloudinary.com/dlanz/image/upload/v1661250603/lewagon/ywd4p3vwczamfq56m0ni.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: flex;
+}
+
 .smoke {
   position:absolute;
-  top:50%;
+  top:55%;
   left:50%;
   transform:translate(-50%,-50%);
 }
-.smoke ul {
-  margin:0;
-  padding:0;
-  display:flex;
-  align-items: center;
+
+// .sloogan{
+//   text-align: center;
+//   font-family: 'Metal Mania', cursive;
+//   font-size: 2em;
+// }
+
+// .arrow{
+//   position: absolute;
+//   transform: translateY(5%) translateX(1100%) rotate(90deg);
+//   font-size: 2em;
+//   font-weight: bolder;
+// }
+
+#accent{
+  color: #8D0711;
+}
+
+// .smoke ul {
+//   margin:0;
+//   padding:0;
+//   display:flex;
+//   align-items: center;
+//   text-align: center;
+// }
+
+// .smoke ul li {
+//   list-style:none;
+//   font-weight:bold;
+//   letter-spacing:10px;
+//   filter:blur(1px);
+//   color:#fff;
+//   font-size: 9em;
+//   display: inline-block;
+//   font-family: 'BioRhyme', serif;
+// }
+
+// .smoke ul:hover li {
+//   animation: smoke 2s linear forwards;
+// }
+// @keyframes smoke {
+//   0% {
+//       transform: rotate(0deg) translateY(0px);
+//       opacity: 1;
+//       filter:blur(1px);
+//   }
+//   100% {
+//     transform: rotate(45deg) translateY(-200px);
+//       opacity: 0;
+//       filter:blur(20px);
+//   }
+// }
+
+// .smoke ul li:nth-child(1){
+//   align-items: center;
+//   display: flex;
+//   animation-delay:0s;
+// }
+// .smoke ul li:nth-child(2){
+//   animation-delay:.4s
+// }
+// .smoke ul li:nth-child(3){
+//   animation-delay:.8s
+// }
+// .smoke ul li:nth-child(4){
+//   animation-delay:1.2s
+// }
+// .smoke ul li:nth-child(5){
+//   animation-delay:1.6s
+// }
+// .smoke ul li:nth-child(6){
+//   animation-delay:2s
+// }
+// .smoke ul li:nth-child(7){
+//   animation-delay:2.4s
+
+// body {
+//   background-color: #000;
+//   overflow: hidden;
+//   margin: 0;
+// }#
+
+.containerHeader {
+  background-image: url("https://64.media.tumblr.com/224f9198d5d88a5e92e43f5ef4f7a592/139ff9bb70edd708-66/s540x810/0edbf6d586b6b4c85c5bd61569992f036c21191b.png");
+position: fixed;
+bottom:0px;
+pointer-events: none;
+background-size: cover;
+background-position: center;
+background-repeat: repeat-x;
+height: 100%;
+width: 100%;
+opacity: 100%;
+min-width: 2000px;
+position: relative;
+animation: fog 4s alternate infinite linear;
+}
+
+.bannerText{
+  position: absolute;
+  // background-color: red;
+  width: 100vw;
+  height: 100vh;
+  // top: calc(100% - 500px);
+  // right: calc(100% - 1000px);
+  // transform: translateX(100%);
+  justify-content: center;
   text-align: center;
-}
-
-.smoke ul li {
-  list-style:none;
-  font-weight:bold;
-  letter-spacing:10px;
-  filter:blur(1px);
-  color:#fff;
-  font-size:6em;
-  display: inline-block;
-}
-.smoke ul:hover li {
-  animation: smoke 2s linear forwards;
-}
-@keyframes smoke {
-  0% {
-      transform: rotate(0deg) translateY(0px);
-      opacity: 1;
-      filter:blur(1px);
+  top: 0;
+  right: 0;
+  h1{
+    font-size: 200px;
+    line-height: 150px;
   }
-  100% {
-    transform: rotate(45deg) translateY(-200px);
-      opacity: 0;
-      filter:blur(20px);
+  p{
+    font-size: 50px;
+    line-height: 150px;
+    
   }
 }
-li > img {
-  width: 100%;
-}
-.smoke ul li:nth-child(1){
-  align-items: center;
-  display: flex;
-  animation-delay:0s;
-  width: 1.5em;
-  margin-right: 20px;
-}
-.smoke ul li:nth-child(2){
-  animation-delay:.4s
-}
-.smoke ul li:nth-child(3){
-  animation-delay:.8s
-}
-.smoke ul li:nth-child(4){
-  animation-delay:1.2s
-}
-.smoke ul li:nth-child(5){
-  animation-delay:1.6s
-}
-.smoke ul li:nth-child(6){
-  animation-delay:2s
-}
-.smoke ul li:nth-child(7){
-  animation-delay:2.4s
-}
-.smoke ul li:nth-child(8){
-  animation-delay:2.8s
-}
-.smoke ul li:nth-child(9){
-  animation-delay:3.2s
-}
-.smoke ul li:nth-child(10){
-  animation-delay:3.6s
-}
-.smoke ul li:nth-child(11){
-  animation-delay:4s
-}
-.smoke ul li:nth-child(12){
-  animation-delay:4.4s
-}
-.smoke ul li:nth-child(13){
-  animation-delay:4.8s
-}
-.smoke ul li:nth-child(14){
-  animation-delay:5.2s
-}
 
+// .fog {
+// opacity: 100%;
+// min-width: 2000px;
+// position: relative;
+// animation-name: fog;
+// animation-duration: 4s;
+// animation-direction: alternate;
+// animation-iteration-count: infinite;
+// animation-timing-function: linear
+// }
+
+@keyframes fog {
+    from {right: 0px;}
+    to {right: 50px; }
+  }

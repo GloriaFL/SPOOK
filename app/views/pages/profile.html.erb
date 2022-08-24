@@ -1,0 +1,8 @@
+<h1>This is our profile page</h1>
+<div class="cards">
+  <% @destination.bookings.each do |booking| %>
+    <div class="card-trip">
+      <%= booking.date_created %>
+    </div>
+  <% end %>
+</div>

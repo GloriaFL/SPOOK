@@ -1,11 +1,16 @@
+@import "button";
+
 .home-nav{
   display: flex;
   justify-content: space-between;
   height: fit-content;
-  background-color: #2C2829;
+  background-color: rgba(36, 36, 36, 0.8);
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
 }
 
-#avatar{
+.avatar{
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -14,49 +19,36 @@
 
 .home-nav-list{
   display: inline-flex;
-  margin-top: 30px;
+  margin-top: 35px;
+  margin-left: 80px;
 }
 
 .list-item{
   list-style: none;
-  padding-left: 40px;
-  color: white;
-  font-size: 30px;
+  padding-right: 40px;
+  color: #8D0711;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .list-item:hover {
-  color: red;
+  color: white;
   transition: 1s;
 }
 
 .buttons{
   margin-top: 30px;
-
 }
 
-.sign-log-btn{
-  margin: 0px 20px;
-  height: 30px;
-  font-size: 30px;
-  border-radius: 10px;
-  height: 40px;
-  background-color: #2C2829;
-  color: white;
-  border: none;
-}
-
-#coche{
+.coche{
   width: 40px;
   height: 40px;
   border-radius: 100%;
   margin: 8px;
 }
 
-
-
-
 #car-movement {
-  top: 58px;
+  top: 45px;
   position: absolute;
   -webkit-animation: linear infinite;
   -webkit-animation-name: run;
@@ -67,7 +59,7 @@
     left: 80px;
   }
   50% {
-    left: calc(20% - 80px); 
+    left: calc(20% - 80px);
    }
   100% {
     left: 100px;
