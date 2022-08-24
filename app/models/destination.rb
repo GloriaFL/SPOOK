@@ -3,7 +3,7 @@ class Destination < ApplicationRecord
   has_many :bookings
   has_many :reviews, through: :bookings
 
-  TYPES = ['Haunted Houses', 'UFO', 'Cemeteries', 'Islands', 'Ghosts']
+  TYPES = ['Haunted Houses', 'UFO', 'Hotels', 'Prisons', 'Castles']
 
   validates :name, uniqueness: true, presence: true
   validates :description, presence: true, length: { minimum: 20 }
