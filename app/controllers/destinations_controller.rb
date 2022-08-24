@@ -2,7 +2,16 @@ class DestinationsController < ApplicationController
   before_action :set_destination, only: [:show, :edit, :update, :destroy]
 
   def index
+    # @destinations = policy_scope(Destination)
+
     @destinations = Destination.all
+
+    @markers = @destinations.geocoded.map do |destination|
+      {
+        lat: destination.latitude,
+        lng: destination.longitude
+      }
+    end
   end
 
   def new
