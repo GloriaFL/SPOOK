@@ -1,20 +1,21 @@
-<%# <nav class="home-nav">
-  <div class="logo">
-    <img class="avatar" src="https://res.cloudinary.com/dlanz/image/upload/v1661245369/lewagon/gfexf3hjjqerb3jzoyfv.png">
+<nav class="home-nav">
+  <div class="container-house">
+    <img src="https://res.cloudinary.com/dlanz/image/upload/v1661245369/lewagon/gfexf3hjjqerb3jzoyfv.png" alt="House Logo" class="logo">
   </div>
 
-  <div id="car-movement">
-    <img class="coche" src="https://res.cloudinary.com/dlanz/image/upload/v1661250937/lewagon/x4os3sops7q93xwisap1.png">
-  </div> %>
-
-  <%# <ul class="home-nav-list">
+  <ul class="home-nav-list">
     <li class="list-item">Home</li>
     <li class="list-item">Search</li>
     <li class="list-item">Bookings</li>
-  </ul> %>
+  </ul>
 
-  <%# <div class="buttons">
+  <div class = "avatar">
+  <img src="https://as2.ftcdn.net/v2/jpg/02/79/66/93/1000_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="buttons">
     <button class="sign-log-btn">Sign up</button>
     <button class="sign-log-btn">Log in</button>
+    <button class="sign-log-btn"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></button>
   </div>
-</nav> %>
+</nav>
