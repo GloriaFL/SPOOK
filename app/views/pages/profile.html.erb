@@ -3,7 +3,7 @@
   <% @bookings.each do |booking| %>
     <div class="card-trip">
       <%= booking.number_people %>
-      <% destination = Destination.find(booking.destination_id) %>
+      <%  destination = Destination.find(booking.destination_id) %>
       <%= destination.name %>
       <%= destination.price %>
       <%= destination.location %>

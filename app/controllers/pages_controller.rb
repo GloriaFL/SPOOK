@@ -5,8 +5,8 @@ class PagesController < ApplicationController
     @destinations = Destination.all
   end
 
-  # def profile
-  #   @bookings = Booking.all
-  #   @destinations = Destination.all
-  # end
+  def profile
+    @bookings = Booking.all
+    @destinations = Destination.all
+  end
 end
