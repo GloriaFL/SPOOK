@@ -24,10 +24,10 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
   more that haunt the walls of this Renaissance-style mansion.",
   price: 200,
   user_id: 1
-}])
+  }])
 
 Destination.create!([{ name: "Amityville Horror House",
-  category: "Haunted Hosues",
+  category: "Haunted Houses",
   location: "Amityville, Long Island, New York",
   intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
   image: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg",
@@ -42,7 +42,7 @@ Destination.create!([{ name: "Amityville Horror House",
   walls of this seemingly typical Long Island suburban home.",
   price: 200,
   user_id: 1
-}])
+  }])
 
 Destination.create!([{ name: "Rose Hall",
   category: "Haunted Houses",
@@ -66,7 +66,7 @@ Destination.create!([{ name: "Monte Cristo Homestead",
   ghfrequently reported - come see why this is considered Australia's most haunted house.",
   price: 400,
   user_id: 1
-}])
+  }])
 
 Destination.create!([{ name: "Foxwood House",
   category: "Haunted Houses",
@@ -76,7 +76,7 @@ Destination.create!([{ name: "Foxwood House",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
   user_id: 1
-}])
+  }])
 
 Destination.create!([{ name: "Casa Lercaro",
   category: "Haunted Houses",

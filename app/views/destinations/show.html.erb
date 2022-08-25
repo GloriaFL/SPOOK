@@ -1,10 +1,9 @@
-<h2><%= @destination.name %></h2>
-<p><%= @destination.description %></p>
-<h1><%= @destination.name %></h1>
-<p><%= @destination.category %></p>
-<p><%= @destination.location %></p>
-<p><%= @destination.intensity %></p>
-<p><%= @destination.price %></p>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+
 
 
 <div class="show-container">
@@ -18,38 +17,34 @@
         <%= @destination.category %>
       </div>
     </div>
-    <img class="image-card" src="<%= @destination.image%>" alt="">
+    <img class="image-show" src="<%= @destination.image%>" alt="">
     <div class="horiz-container">
       <div class="subheader-accent"></div>
-      <h2>Overview</h2>
+      <h2 class="subheader-text">Overview</h2>
     </div>
     <div class="overview-text"> <%= @destination.description%> </div>
     <div class="horiz-container">
       <div class="subheader-accent"></div>
-      <h2>Reviews</h2>
+      <h2 class="subheader-text">Reviews</h2>
     </div>
   </div>
   <div class="container-right">
-    <%= simple_form_for [@destination, @booking] do |f| %>
-      <%= f.input :date_start %>
-      <%= f.input :date_end %>
-      <%= f.input :number_people %>
-      <%= f.submit %>
-    <% end %>
+    <div class="container-form">
+      <%= simple_form_for [@destination, @booking] do |f| %>
+        <%= f.input :date_start %>
+        <%= f.input :date_end %>
+        <%= f.input :number_people %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <div style="width: 500px; height: 500px;" class="map map-show"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
+
 </div>
-
-
-
-
-<h3>Reviews</h3>
-<h4>Add your review</h4>
-<%# This wasn't working, to be fixed %>
-<%#= simple_form_for [@booking, @review] do |f| %>
-  <%#= f.input :comment, placeholder: "Add your review here..." %>
-  <%#= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { data: { controller: "star-rating" } } %>
-  <%#= f.submit class:"btn btn-flat" %>
-<%# end %>
 
 
 <%= link_to "Delete",
@@ -58,9 +53,3 @@
   %>
 <%= link_to "Edit", edit_destination_path(@destination) %>
 <%= link_to "Back to all destinations", destinations_path %>
-
-<div style="width: 500px; height: 500px;" class="map"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>

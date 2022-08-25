@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
 // Define fonts for body and headers
 $text-font: "Inter", "sans-serif";
 $title-font: "BioRhyme", serif;
 $body-font: "Work Sans", "sans-serif";
 $headers-font: "Nunito", "sans-serif";
+$subheader-font: 'Metal Mania', "cursive";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
