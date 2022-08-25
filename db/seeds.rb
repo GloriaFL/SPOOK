@@ -63,7 +63,7 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
       image: "https://cdn.mamamia.com.au/wp/wp-content/uploads/2019/04/14173717/monte-christo-feat-1.jpg",
       description: "A once grandeous mansion that has fallen into ruin over the past decades.
       With lights turning on around the house, moving furniture, and other paranormal activity
-      frequently reported - come see why this is considered Australia's most haunted house.",
+      ghfrequently reported - come see why this is considered Australia's most haunted house.",
       price: 400,
       user_id: 1
       }])
