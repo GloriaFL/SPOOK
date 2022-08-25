@@ -44,6 +44,30 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
     user_id: 1
     }])
 
+    Destination.create!([{ name: "Rose Hall",
+      category: "Haunted Houses",
+      location: "Rose Hall, Montego Bay, Jamaica",
+      intensity: "&#x1F47B &#x1F47B &#x1F47B",
+      image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jamaica/JF_JAM13_ROSEHALL_0199_d4a484f1-5056-a36a-0704cc58d453753b.jpg",
+      description: "Haunted by the former owner's wife, Annie Palmer, who allegedly murdered
+      multiple husbands using voodoo practices. Join this candlelit night tour of this
+      former colonial plantation to see a glimpse of the ghost of Annie Palmer, The White Witch.",
+      price: 200,
+      user_id: 1
+      }])
+
+    Destination.create!([{ name: "Monte Cristo Homestead",
+      category: "Haunted Houses",
+      location: "Junee, Australia",
+      intensity: "&#x1F47B &#x1F47B",
+      image: "https://cdn.mamamia.com.au/wp/wp-content/uploads/2019/04/14173717/monte-christo-feat-1.jpg",
+      description: "A once grandeous mansion that has fallen into ruin over the past decades.
+      With lights turning on around the house, moving furniture, and other paranormal activity
+      frequently reported - come see why this is considered Australia's most haunted house.",
+      price: 400,
+      user_id: 1
+      }])
+
   Destination.create!([{ name: "Foxwood House",
     category: "Haunted Houses",
     location: "Foxwood House, 13 5th St, Johannesburg, South Africa",
@@ -54,21 +78,11 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
     user_id: 1
     }])
 
-Destination.create!([{ name: "Rose Hall",
-  category: "Haunted Houses",
-  location: "Rose Hall, Montego Bay, Jamaica",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B",
-  image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jamaica/JF_JAM13_ROSEHALL_0199_d4a484f1-5056-a36a-0704cc58d453753b.jpg",
-  description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  price: 200,
-  user_id: 1
-  }])
-
 Destination.create!([{ name: "Casa Lercaro",
   category: "Haunted Houses",
   location: "Tenerife, Spain",
   intensity: "&#x1F47B",
-  image: "https://upload.wikimedia.org/wikipedia/commons/9/99/LagunaLercaro01.jpg"
+  image: "https://upload.wikimedia.org/wikipedia/commons/9/99/LagunaLercaro01.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
   user_id: 1
@@ -252,16 +266,6 @@ Destination.create!([{ name: "West Virginia Penitentiary",
   image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/West_Virginia_State_Penitentiary%2C_Moundsville%2C_WV.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
-  user_id: 1
-  }])
-
-Destination.create!([{ name: "Monte Cristo Homestead",
-  category: "Haunted Houses",
-  location: "Junee, Australia",
-  intensity: "&#x1F47B &#x1F47B",
-  image: "https://cdn.mamamia.com.au/wp/wp-content/uploads/2019/04/14173717/monte-christo-feat-1.jpg",
-  description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  price: 400,
   user_id: 1
   }])
 
