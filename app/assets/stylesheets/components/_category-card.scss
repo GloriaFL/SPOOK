@@ -1,116 +1,40 @@
-#container-cat-card {
-  height: 550px;
-  width: 100%;
-  margin: 10px 0;
-  padding: 0;
-  padding-bottom: 20px;
-  background: lightgray;
-  display: grid;
-  place-items: center
-}
-
-.categories-h1 {
-  font-size: 30px;
-  margin: 0;
-  line-height: 30px;
-}
-
-#slider-container {
-  height: 400px;
+.container-cat-section{
+  height: 300px;
   width: 95vw;
-  max-width: 1700px;
-  position: relative;
-  overflow: hidden;
+  margin: 0 16px;
+  margin-bottom: 170px;
 }
 
-#categories-h1 {
+.categorytitle-h1 {
+  display:flex;
+  justify-content: center;
   font-size: 30px;
 }
 
-#slider-container .btn {
-  position: absolute;
-  top: calc(50% - 30px);
-  height: 40px;
-  width: 40px;
-  border-left: 8px solid darkgrey;
-  border-top: 8px solid darkgrey;
+.cat-grid{
+  height:100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
 }
 
-#slider-container .btn:hover {
-  transform: scale(1.2);
-}
-
-#slider-container .btn.inactive {
-  border-color: rgb(153, 121, 126)
-}
-
-#slider-container .btn:first-of-type {
-  transform: rotate(-45deg);
-  left: 10px
-}
-
-#slider-container .btn:last-of-type {
-  transform: rotate(135deg);
-  right: 10px;
-}
-
-#slider-container #slider {
-  display: flex;
-  width: 1000%;
-  height: 100%;
-  transition: all .5s;
-}
-
-#slider-container #slider .slide {
-  height: 100%;
-  margin: auto 10px;
-  background-color: white;
-  box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+.cat-button{
+  height:100%;
+  width: 100%;
+  background-size: cover;
+  background-position:center;
   display: grid;
   place-items: center;
-  background-size: cover;
-  background-position: center;
-  font-size: 30px;
-  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
 }
 
-#slider-container #slider .slide span {
-  color: white;
-}
-
-#slider a{
+.cat-button a{
   text-decoration: none;
-  color:white;
-}
-
-@media only screen and (min-width: 1100px) {
-
-  #slider-container #slider .slide {
-    width: calc(2.5% - 20px);
-  }
-
-}
-
-@media only screen and (max-width: 1100px) {
-
-  #slider-container #slider .slide {
-    width: calc(3.3333333% - 20px);
-  }
-
-}
-
-@media only screen and (max-width: 900px) {
-
-  #slider-container #slider .slide {
-    width: calc(5% - 20px);
-  }
-
-}
-
-@media only screen and (max-width: 550px) {
-
-  #slider-container #slider .slide {
-    width: calc(10% - 20px);
-  }
-
+  color: white;
+  font-family: $text-font;
+  font-size: 26px;
+  text-shadow: 2px 2px 1px black;
 }

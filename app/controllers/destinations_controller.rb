@@ -14,6 +14,13 @@ class DestinationsController < ApplicationController
         image_url: helpers.asset_url("haunted_house.png")
       }
     end
+
+    if params[:query].present?
+      mi_sql = "name ILIKE :query OR description ILIKE :query"
+      @destinations = Destination.where(mi_sql, query: "%#{params[:query]}%")
+    else
+      @destinations = Destination.all
+    end
   end
 
   def new
@@ -34,8 +41,9 @@ class DestinationsController < ApplicationController
   end
 
   def show
+    @user_booking = Booking.find_by(user: current_user, destination: @destination)
+    @review = Review.new
     @booking = Booking.new
-
     # @markers = @booking
     # {
     #   lat: flat.latitude,
