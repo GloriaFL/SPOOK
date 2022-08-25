@@ -1,8 +1,6 @@
 .container-cat-section{
-  height: 300px;
-  width: 95vw;
+  height: 450px;
   margin: 0 16px;
-  margin-bottom: 170px;
 }
 
 .categorytitle-h1 {
@@ -12,12 +10,10 @@
 }
 
 .cat-grid{
-  height:100%;
-  width: 100%;
+  height: 250px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  padding: 16px;
 }
 
 .cat-button{
