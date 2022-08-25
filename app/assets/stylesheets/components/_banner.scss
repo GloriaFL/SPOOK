@@ -1,7 +1,7 @@
 body {
   margin:0;
   padding:0;
-  height: 100vh;
+  // height: 100vh;
   max-width: 100%;
 }
 
@@ -55,11 +55,13 @@ animation: fog 4s alternate infinite linear;
 .action-btn{
   margin: 0px 20px;
   height: 30px;
+  font-family: $text-font;
   font-size: 25px;
   height: 40px;
   background-color: rgba(36, 36, 36, 0.8);
   color: #8D0711;
   transition: 0.25s;
+  border-radius: 5px;
   border-style: solid;
   border-color: #8D0711;
   &:hover,
@@ -86,14 +88,16 @@ animation: fog 4s alternate infinite linear;
   top: 0;
   right: 0;
   h1{
-    font-size: 200px;
-    line-height: 150px;
+    font-size: 230px;
+    font-family:'NightmarePills';
+    line-height: 0px;
     color:white;
     text-shadow: 3px 4px black;
   }
   p{
-    font-size: 50px;
-    line-height: 150px;
+    font-size: 25px;
+    font-family:$text-font;
+    line-height: 0px;
     color:white;
     text-shadow: 3px 3px black;
   }
@@ -101,5 +105,5 @@ animation: fog 4s alternate infinite linear;
 
 @keyframes fog {
     from {right: 0px;}
-    to {right: 50px; }
+    to {right: 100px; }
   }
