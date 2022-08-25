@@ -1,7 +1,5 @@
 <div class="main-container">
-  <div>
-    <h1 class="main-title">Index page</h1>
-  </div>
+  <h1 class="main-title">Destinations</h1>
   <div class="cards">
     <% @destinations.each do |destination| %>
       <div class="container-card">
@@ -14,9 +12,7 @@
           </div>
           <div class="categories-container">
             <div class="intensity-card">
-              <%= link_to destination_path(destination), class: "text-card categories" do %>
-                <%= sanitize destination.intensity %>
-              <% end %>
+              <%= link_to destination.intensity, destination_path(destination), class: "text-card categories" %>
             </div>
             <div class="categories-card">
               <%= link_to destination.category, destination_path(destination), class: "text-card categories" %>
@@ -26,6 +22,3 @@
       </div>
     <% end %>
   </div>
-
-<%= render "shared/map" %>
-
