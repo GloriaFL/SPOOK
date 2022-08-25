@@ -7,21 +7,35 @@
 <p><%= @destination.price %></p>
 
 
-<div class="main-container">
+<div class="show-container">
   <div class="container-left">
-    <h2><%= @destination.name %></h2>
-    <div class="categories-container">
+    <h2 class="title-show"><%= @destination.name %></h2>
+    <div class="horiz-container">
       <div class="intensity-card">
-        <%= @destination.intensity %>
+        <%= sanitize @destination.intensity %>
       </div>
-      <div class="categories-card">
+      <div class="categories-card text-card categories">
         <%= @destination.category %>
       </div>
     </div>
-    
+    <img class="image-card" src="<%= @destination.image%>" alt="">
+    <div class="horiz-container">
+      <div class="subheader-accent"></div>
+      <h2>Overview</h2>
+    </div>
+    <div class="overview-text"> <%= @destination.description%> </div>
+    <div class="horiz-container">
+      <div class="subheader-accent"></div>
+      <h2>Reviews</h2>
+    </div>
   </div>
   <div class="container-right">
-
+    <%= simple_form_for [@destination, @booking] do |f| %>
+      <%= f.input :date_start %>
+      <%= f.input :date_end %>
+      <%= f.input :number_people %>
+      <%= f.submit %>
+    <% end %>
   </div>
 </div>
 
@@ -37,12 +51,6 @@
   <%#= f.submit class:"btn btn-flat" %>
 <%# end %>
 
-<%= simple_form_for [@destination, @booking] do |f| %>
-  <%= f.input :date_start %>
-  <%= f.input :date_end %>
-  <%= f.input :number_people %>
-  <%= f.submit %>
-<% end %>
 
 <%= link_to "Delete",
     destination_path(@destination),

@@ -6,3 +6,32 @@
   width: 100%;
   height: 100px;
 }
+
+.show-container {
+  display: flex;
+  align-items: center;
+  height: 1200px;
+}
+
+.container-left {
+  width: 60%;
+}
+
+.container-right {
+  width: 40%;
+}
+
+.horiz-container {
+  display: flex;
+  padding: 0px 18px;
+}
+
+.image-show {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.title-show {
+  font-family: $title-font;
+  font-size: 40px;
+}
