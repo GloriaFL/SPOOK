@@ -1,25 +1,18 @@
 class ReviewsController < ApplicationController
   def create
-    @review = Review.new(review_params)
     @destination = Destination.find(params[:destination_id])
+    @review = Review.new(review_params)
     @review.destination = @destination
     if @review.save
-      redirect_to destination_path(@list)
+      redirect_to destination_path(@destination)
     else
-      @destination = Destination.new
-      render 'destination/show', status: :unprocessable_entity
+      render "destinations/show", status: :unprocessable_entity
     end
-  end
-
-  def destroy
-    @review = Review.find(params[:id])
-    @review.destroy
-    redirect_to destination_path(@review.destination)
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:comment, :rating)
+    params.require(:review).permit(:content)
   end
 end

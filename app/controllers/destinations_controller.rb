@@ -35,6 +35,7 @@ class DestinationsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @review = Review.new
   end
 
   def update

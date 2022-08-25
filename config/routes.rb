@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   resources :destinations do
     resources :bookings, only: [:index, :new, :create, :edit]
+    resources :reviews, only: :create
   end
 end
