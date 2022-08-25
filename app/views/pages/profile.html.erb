@@ -9,6 +9,7 @@
       <li><%= destination.location %></li>
       <li><%= destination.category %></li>
       <li><%= destination.intensity%></li>
+      <button><%= link_to "Edit booking", edit_destination_booking_path(current_user.booking, booking) %></button>
     </ul>
   <% end %>
 </div>

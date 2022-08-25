@@ -1,3 +1,6 @@
+
+
+
 <div class="main-container">
   <div>
     <h1 class="main-title">Index page</h1>
@@ -9,6 +12,7 @@
         <div class="card-information">
           <div class="text-container">
             <h3><%= link_to destination.name, destination_path(destination), class: "title-card" %> </h3>
+            <p><%= destination.description %></p>
             <p><%= link_to destination.location, destination_path(destination), class: "text-card" %></p>
             <p><strong>$<%= link_to destination.price, destination_path(destination), class: "text-card" %></strong></p>
           </div>
@@ -24,6 +28,15 @@
       </div>
     <% end %>
   </div>
+
+<%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a destination"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 
   <div style="width: 500px; height: 500px;" class="map"
     data-controller="map"
