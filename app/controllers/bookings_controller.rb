@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_destination, only: %i[new create edit]
 
-  def index
-    @bookings = Booking.all
-    @destinations = Destination.all
-  end
+  # def index
+  #   @bookings = Booking.all
+  #   @destinations = Destination.all
+  # end
 
   def create
     @booking = Booking.new(booking_params)
@@ -18,11 +18,11 @@ class BookingsController < ApplicationController
     end
   end
 
-  def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
-    redirect_to destination_path(@booking.destination), status: :see_other
-  end
+  # def destroy
+  #   @booking = Booking.find(params[:id])
+  #   @booking.destroy
+  #   redirect_to destination_path(@booking.destination), status: :see_other
+  # end
 
   def edit
     @booking = Booking.find(params[:id])
@@ -32,7 +32,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    redirect_to profile_path(@booking)
   end
 
   private
