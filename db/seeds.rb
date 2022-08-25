@@ -27,7 +27,7 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
   }])
 
   Destination.create!([{ name: "Amityville Horror House",
-    category: "Haunted Hosues",
+    category: "Haunted Houses",
     location: "Amityville, Long Island, New York",
     intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
     image: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg",
@@ -89,7 +89,7 @@ Destination.create!([{ name: "Casa Lercaro",
   }])
 
 Destination.create!([{ name: "Chaonei No. 81",
-  category: "Haunted Hosues",
+  category: "Haunted Houses",
   location: "81 Chaoyangmen Inner Street, Dongcheng District, Beijing, China",
   intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
   image: "(https://phantom-elmundo.unidadeditorial.es/5f3f3bd42025777361dbe51821500846/resize/828/f/jpg/assets/multimedia/imagenes/2022/08/20/16609477838666.jpg)",
@@ -99,7 +99,7 @@ Destination.create!([{ name: "Chaonei No. 81",
   }])
 
 Destination.create!([{ name: "Winchester Mystery House",
-  category: "Haunted Hosues",
+  category: "Haunted Houses",
   location: "Winchester Mystery House, 525 S Winchester Blvd, San Jose, CA, USA",
   intensity: "&#x1F47B &#x1F47B",
   image: "https://s.hdnux.com/photos/01/12/13/74/19447552/3/1200x0.jpg",
@@ -109,7 +109,7 @@ Destination.create!([{ name: "Winchester Mystery House",
   }])
 
 Destination.create!([{ name: "Treasurers House",
-  category: "Haunted Hosues",
+  category: "Haunted Houses",
   location: "Treasurers House, Minster Yard, York, UK,",
   intensity: "&#x1F47B &#x1F47B",
   image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/The_Treasurer%27s_House1.jpg",
