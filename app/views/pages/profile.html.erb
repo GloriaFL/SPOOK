@@ -1,6 +1,7 @@
 <h1>This is our profile page</h1>
 <div class="cards">
   <% @bookings.each do |booking| %>
+<<<<<<< HEAD
     <div class="card-trip">
       <%= booking.number_people %>
       <%  destination = Destination.find(booking.destination_id) %>
@@ -10,5 +11,16 @@
       <%= destination.category %>
       <%= destination.intensity %>
     </div>
+=======
+    <ul class="card-trip">
+      <li><%= booking.number_people %></li>
+      <% destination = Destination.find(booking.destination_id) %>
+      <li><%= destination.name %></li>
+      <li><%= destination.price %></li>
+      <li><%= destination.location %></li>
+      <li><%= destination.category %></li>
+      <li><%= destination.intensity%></li>
+    </ul>
+>>>>>>> master
   <% end %>
 </div>

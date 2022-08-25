@@ -35,6 +35,13 @@ class DestinationsController < ApplicationController
 
   def show
     @booking = Booking.new
+
+    # @markers = @booking
+    # {
+    #   lat: flat.latitude,
+    #   lng: flat.longitude,
+    #   info_window: render_to_string(partial: "info_window", locals: {destination: destination})
+    # }
   end
 
   def update
