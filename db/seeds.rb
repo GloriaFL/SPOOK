@@ -26,57 +26,57 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
   user_id: 1
   }])
 
-  Destination.create!([{ name: "Amityville Horror House",
-    category: "Haunted Houses",
-    location: "Amityville, Long Island, New York",
-    intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
-    image: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg",
-    description: "After a man killed six members of his family in this house in 1974,
-    the killer claimed to be lured to do so by evil spirits in the house. The house
-    has been sold to multiple owners between the time of the killings and today, without any
-    long-term permanent residents. Each owner claims that the house is unlivable due to
-    paranormal activity with reports doors opening and closing on their own,
-    knives found in odd places, children screaming and even people levitating in their sleep.
-    <br>Was the killer really being controlled by evil spirits? Why can`t anyone remain
-    living in this house since this event? Come see for yourself what is hidden behind the
-    walls of this seemingly typical Long Island suburban home.",
-    price: 200,
-    user_id: 1
-    }])
+Destination.create!([{ name: "Amityville Horror House",
+  category: "Haunted Houses",
+  location: "Amityville, Long Island, New York",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+  image: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg",
+  description: "After a man killed six members of his family in this house in 1974,
+  the killer claimed to be lured to do so by evil spirits in the house. The house
+  has been sold to multiple owners between the time of the killings and today, without any
+  long-term permanent residents. Each owner claims that the house is unlivable due to
+  paranormal activity with reports doors opening and closing on their own,
+  knives found in odd places, children screaming and even people levitating in their sleep.
+  <br>Was the killer really being controlled by evil spirits? Why can`t anyone remain
+  living in this house since this event? Come see for yourself what is hidden behind the
+  walls of this seemingly typical Long Island suburban home.",
+  price: 200,
+  user_id: 1
+  }])
 
-    Destination.create!([{ name: "Rose Hall",
-      category: "Haunted Houses",
-      location: "Rose Hall, Montego Bay, Jamaica",
-      intensity: "&#x1F47B &#x1F47B &#x1F47B",
-      image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jamaica/JF_JAM13_ROSEHALL_0199_d4a484f1-5056-a36a-0704cc58d453753b.jpg",
-      description: "Haunted by the former owner's wife, Annie Palmer, who allegedly murdered
-      multiple husbands using voodoo practices. Join this candlelit night tour of this
-      former colonial plantation to see a glimpse of the ghost of Annie Palmer, The White Witch.",
-      price: 200,
-      user_id: 1
-      }])
+Destination.create!([{ name: "Rose Hall",
+  category: "Haunted Houses",
+  location: "Rose Hall, Montego Bay, Jamaica",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B",
+  image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jamaica/JF_JAM13_ROSEHALL_0199_d4a484f1-5056-a36a-0704cc58d453753b.jpg",
+  description: "Haunted by the former owner's wife, Annie Palmer, who allegedly murdered
+  multiple husbands using voodoo practices. Join this candlelit night tour of this
+  former colonial plantation to see a glimpse of the ghost of Annie Palmer, The White Witch.",
+  price: 200,
+  user_id: 1
+  }])
 
-    Destination.create!([{ name: "Monte Cristo Homestead",
-      category: "Haunted Houses",
-      location: "Junee, Australia",
-      intensity: "&#x1F47B &#x1F47B",
-      image: "https://cdn.mamamia.com.au/wp/wp-content/uploads/2019/04/14173717/monte-christo-feat-1.jpg",
-      description: "A once grandeous mansion that has fallen into ruin over the past decades.
-      With lights turning on around the house, moving furniture, and other paranormal activity
-      ghfrequently reported - come see why this is considered Australia's most haunted house.",
-      price: 400,
-      user_id: 1
-      }])
+Destination.create!([{ name: "Monte Cristo Homestead",
+  category: "Haunted Houses",
+  location: "Junee, Australia",
+  intensity: "&#x1F47B &#x1F47B",
+  image: "https://cdn.mamamia.com.au/wp/wp-content/uploads/2019/04/14173717/monte-christo-feat-1.jpg",
+  description: "A once grandeous mansion that has fallen into ruin over the past decades.
+  With lights turning on around the house, moving furniture, and other paranormal activity
+  ghfrequently reported - come see why this is considered Australia's most haunted house.",
+  price: 400,
+  user_id: 1
+  }])
 
-  Destination.create!([{ name: "Foxwood House",
-    category: "Haunted Houses",
-    location: "Foxwood House, 13 5th St, Johannesburg, South Africa",
-    intensity: "&#x1F47B &#x1F47B",
-    image: "https://media-cdn.tripadvisor.com/media/photo-s/02/9a/dc/c7/filename-foxwoos-house.jpg",
-    description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    price: 200,
-    user_id: 1
-    }])
+Destination.create!([{ name: "Foxwood House",
+  category: "Haunted Houses",
+  location: "Foxwood House, 13 5th St, Johannesburg, South Africa",
+  intensity: "&#x1F47B &#x1F47B",
+  image: "https://media-cdn.tripadvisor.com/media/photo-s/02/9a/dc/c7/filename-foxwoos-house.jpg",
+  description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  price: 200,
+  user_id: 1
+  }])
 
 Destination.create!([{ name: "Casa Lercaro",
   category: "Haunted Houses",
@@ -93,6 +93,16 @@ Destination.create!([{ name: "Chaonei No. 81",
   location: "81 Chaoyangmen Inner Street, Dongcheng District, Beijing, China",
   intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
   image: "(https://phantom-elmundo.unidadeditorial.es/5f3f3bd42025777361dbe51821500846/resize/828/f/jpg/assets/multimedia/imagenes/2022/08/20/16609477838666.jpg)",
+  description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  price: 200,
+  user_id: 1
+  }])
+
+Destination.create!([{ name: "Amityville Horror House",
+  category: "Haunted Houses",
+  location: "Amityville, Long Island, New York",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+  image: "(https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg)",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
   user_id: 1
