@@ -281,7 +281,7 @@ Destination.create!([{ name: "West Virginia Penitentiary",
 
 Destination.create!([{ name: "Casa de la Poesia",
   category: "Haunted Houses",
-  location: "Bogata, Colombia",
+  location: "Bogota, Colombia",
   intensity: "&#x1F47B",
   image: "https://diariolaeconomia.com/media/k2/items/cache/3b04befec86798a8e7e4cdffa435f27c_XL.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
