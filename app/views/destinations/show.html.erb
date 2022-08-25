@@ -1,23 +1,48 @@
-<img src="https://th.bing.com/th/id/R.92f70560ee799c18810ea173f1e41ad5?rik=U5BedAB23LVpLw&riu=http%3a%2f%2fmiam-images.m.i.pic.centerblog.net%2fb89229f8.png&ehk=W3bacjn5GTlLNy8zMb8tJKhjFGtP%2fVHHD%2b9JtiNnsoE%3d&risl=&pid=ImgRaw&r=0" alt="haunted house" style="width:400px">
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
 
+<div class="show-container">
+  <div class="container-left">
+    <h2 class="title-show"><%= @destination.name %></h2>
+    <div class="horiz-container">
+      <div class="intensity-card">
+        <%= sanitize @destination.intensity %>
+      </div>
+      <div class="categories-card text-card categories">
+        <%= @destination.category %>
+      </div>
+    </div>
+    <img class="image-show" src="<%= @destination.image%>" alt="">
+    <div class="horiz-container">
+      <div class="subheader-accent"></div>
+      <h2 class="subheader-text">Overview</h2>
+    </div>
+    <div class="overview-text"> <%= @destination.description%> </div>
+    <div class="horiz-container">
+      <div class="subheader-accent"></div>
+      <h2 class="subheader-text">Reviews</h2>
+    </div>
+  </div>
+  <div class="container-right">
+    <div class="container-form">
+      <%= simple_form_for [@destination, @booking] do |f| %>
+        <%= f.input :date_start %>
+        <%= f.input :date_end %>
+        <%= f.input :number_people %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <div style="width: 500px; height: 500px;" class="map map-show"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 
-
-<h1><%#= @destination.name %></h1>
-<p><%#= @destination.category %></p>
-<p><%#= @destination.location %></p>
-<p><%#= @destination.intensity %></p>
-<p><%#= @destination.price %></p>
-
-
-<h1>Create a booking</h1>
-<%= simple_form_for [@destination, @booking] do |f| %>
-  <%= f.input :date_start %>
-  <%= f.input :date_end %>
-  <%= f.input :number_people %>
-  <%= f.submit %>
-<% end %>
-
--------------------------------------
+</div>
 
 <h3>Reviews</h3>
 <div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
@@ -39,18 +64,10 @@
     <% end %>
   <% end %>
 </div>
-<br>
-------------------------------
-<br>
+
 <%= link_to "Delete",
     destination_path(@destination),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
 <%= link_to "Edit", edit_destination_path(@destination) %>
 <%= link_to "Back to all destinations", destinations_path %>
-
-<div style="width: 500px; height: 500px;" class="map"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
