@@ -11,22 +11,29 @@
 <p><%= @destination.price %></p>
 
 <h3>Reviews</h3>
-<div>
-  <% if @destinatio.reviews.blank? %>
-    Be the first to leave a review for <%= @destination.name %>
-  <% else %>
-    <% @destination.reviews.each do |review| %>
-      <p><%= review.content %></p>
+<div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
+  <div data-insert-in-list-target="items">
+    <% if @destination.reviews.blank? %>
+      Be the first to leave a review for <%= @destination.name %>
+    <% else %>
+      <% @destination.reviews.each do |review| %>
+        <p><%= review.content %></p>
+      <% end %>
     <% end %>
+  </div>
+  <%= simple_form_for([@destination, @review],
+      data: {
+        insert_in_list_target: "form",
+        action: "submit->insert-in-list#send"
+      }) do |f|
+    %>
+    <%= f.input :content %>
+    <%= f.button :submit %>
   <% end %>
 </div>
-<%= simple_form_for([@destinaiton, @review]) do |f| %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
 
-
-
+------------------------------
+<h1>Create a booking</h1>
 <%= simple_form_for [@destination, @booking] do |f| %>
   <%= f.input :date_start %>
   <%= f.input :date_end %>
