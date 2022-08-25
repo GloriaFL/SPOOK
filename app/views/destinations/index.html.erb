@@ -1,36 +1,4 @@
-
-
-
-<div class="main-container">
-  <div>
-    <h1 class="main-title">Index page</h1>
-  </div>
-  <div class="cards">
-    <% @destinations.each do |destination| %>
-      <div class="container-card">
-        <img class="image-card" src="https://cdn.pixabay.com/photo/2018/03/18/15/26/villa-3237114_1280.jpg" alt="">
-        <div class="card-information">
-          <div class="text-container">
-            <h3><%= link_to destination.name, destination_path(destination), class: "title-card" %> </h3>
-            <p><%= destination.description %></p>
-            <p><%= link_to destination.location, destination_path(destination), class: "text-card" %></p>
-            <p><strong>$<%= link_to destination.price, destination_path(destination), class: "text-card" %></strong></p>
-          </div>
-          <div class="categories-container">
-            <div class="intensity-card">
-              <%= link_to destination_path(destination), class: "text-card categories" do %>
-                <%= sanitize destination.intensity %>
-              <% end %>
-            </div>
-            <div class="categories-card">
-              <%= link_to destination.category, destination_path(destination), class: "text-card categories" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
+<%= render "shared/destination-cards" %>
 
 <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
