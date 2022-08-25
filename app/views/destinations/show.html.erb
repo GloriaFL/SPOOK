@@ -1,30 +1,69 @@
-<img src="https://th.bing.com/th/id/R.92f70560ee799c18810ea173f1e41ad5?rik=U5BedAB23LVpLw&riu=http%3a%2f%2fmiam-images.m.i.pic.centerblog.net%2fb89229f8.png&ehk=W3bacjn5GTlLNy8zMb8tJKhjFGtP%2fVHHD%2b9JtiNnsoE%3d&risl=&pid=ImgRaw&r=0" alt="haunted house" style="width:400px">
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
+<h2>----------------------</h2>
 
-<h2><%= @destination.name %></h2>
-<p><%= @destination.description %></p>
+<div class="show-container">
+  <div class="container-left">
+    <h2 class="title-show"><%= @destination.name %></h2>
+    <div class="horiz-container">
+      <div class="intensity-card">
+        <%= sanitize @destination.intensity %>
+      </div>
+      <div class="categories-card text-card categories">
+        <%= @destination.category %>
+      </div>
+    </div>
+    <img class="image-show" src="<%= @destination.image%>" alt="">
+    <div class="horiz-container">
+      <div class="subheader-accent"></div>
+      <h2 class="subheader-text">Overview</h2>
+    </div>
+    <div class="overview-text"> <%= @destination.description%> </div>
+    <div class="horiz-container">
+      <div class="subheader-accent"></div>
+      <h2 class="subheader-text">Reviews</h2>
+    </div>
+  </div>
+  <div class="container-right">
+    <div class="container-form">
+      <%= simple_form_for [@destination, @booking] do |f| %>
+        <%= f.input :date_start %>
+        <%= f.input :date_end %>
+        <%= f.input :number_people %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <div style="width: 500px; height: 500px;" class="map map-show"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 
-
-<h1><%= @destination.name %></h1>
-<p><%= @destination.category %></p>
-<p><%= @destination.location %></p>
-<p><%= @destination.intensity %></p>
-<p><%= @destination.price %></p>
+</div>
 
 <h3>Reviews</h3>
-<h4>Add your review</h4>
-<%# This wasn't working, to be fixed %>
-<%#= simple_form_for [@booking, @review] do |f| %>
-  <%#= f.input :comment, placeholder: "Add your review here..." %>
-  <%#= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { data: { controller: "star-rating" } } %>
-  <%#= f.submit class:"btn btn-flat" %>
-<%# end %>
-
-<%= simple_form_for [@destination, @booking] do |f| %>
-  <%= f.input :date_start %>
-  <%= f.input :date_end %>
-  <%= f.input :number_people %>
-  <%= f.submit %>
-<% end %>
+<div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
+  <div data-insert-in-list-target="items">
+    <% if @destination.reviews.blank? %>
+      Be the first to leave a review for <%= @destination.name %>
+    <% else %>
+      <% @destination.reviews.each do |review| %>
+        <p><%= review.content %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <h5>Add your review</h5>
+  <% if @booking%>
+    <%= simple_form_for [@user_booking, @review] do |f|%>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.button :submit %>
+    <% end %>
+  <% end %>
+</div>
 
 <%= link_to "Delete",
     destination_path(@destination),
