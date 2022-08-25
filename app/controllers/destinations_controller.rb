@@ -34,8 +34,15 @@ class DestinationsController < ApplicationController
   end
 
   def show
-    @booking = Booking.new
+    @user_booking = Booking.find_by(user: current_user, destination: @destination)
     @review = Review.new
+    @booking = Booking.new
+    # @markers = @booking
+    # {
+    #   lat: flat.latitude,
+    #   lng: flat.longitude,
+    #   info_window: render_to_string(partial: "info_window", locals: {destination: destination})
+    # }
   end
 
   def update
