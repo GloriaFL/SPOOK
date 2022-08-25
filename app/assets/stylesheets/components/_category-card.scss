@@ -19,6 +19,11 @@
 .cat-button{
   height:100%;
   width: 100%;
+  text-decoration: none;
+  color: white;
+  font-family: $text-font;
+  font-size: 26px;
+  text-shadow: 2px 2px 1px black;
   background-size: cover;
   background-position:center;
   display: grid;
@@ -27,10 +32,6 @@
   box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
 }
 
-.cat-button a{
+.cat-grid a {
   text-decoration: none;
-  color: white;
-  font-family: $text-font;
-  font-size: 26px;
-  text-shadow: 2px 2px 1px black;
 }
