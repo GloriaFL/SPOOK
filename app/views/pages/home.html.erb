@@ -4,31 +4,8 @@
 <%= link_to "See all destinations", destinations_path %>
 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
 
+<%= render "shared/avatar" %>
 <%= render "shared/banner" %>
 <%= render "shared/category-card" %>
-
-<div class="main-container">
-  <h1 class="main-title">Destinations:</h1>
-  <div class="cards">
-    <% @destinations.each do |destination| %>
-      <div class="container-card">
-        <img class="image-card" src="https://cdn.pixabay.com/photo/2018/03/18/15/26/villa-3237114_1280.jpg" alt="">
-        <div class="card-information">
-          <div class="text-container">
-            <h3><%= link_to destination.name, destination_path(destination), class: "title-card" %> </h3>
-            <p><%= link_to destination.location, destination_path(destination), class: "text-card" %></p>
-            <p><strong>$<%= link_to destination.price, destination_path(destination), class: "text-card" %></strong></p>
-          </div>
-          <div class="categories-container">
-            <div class="intensity-card">
-              <%= link_to destination.intensity, destination_path(destination), class: "text-card categories" %>
-            </div>
-            <div class="categories-card">
-              <%= link_to destination.category, destination_path(destination), class: "text-card categories" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+<%= render "shared/destination-cards" %>
 
