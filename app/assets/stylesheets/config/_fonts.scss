@@ -2,13 +2,25 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
+@font-face {
+  font-family: 'NightmarePills';
+  src: url('NightmarePills.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 // Define fonts for body and headers
-$text-font: "Inter", "sans-serif";
+$text-font: 'Libre Baskerville', serif;
 $title-font: "BioRhyme", serif;
 $body-font: "Work Sans", "sans-serif";
 $headers-font: "Nunito", "sans-serif";
-
+$logo-header: "NightmarePills", "serif";
+h1 {
+ font-family: $text-font;
+ color:black;
+ text-shadow: 2px 2px 1px white;
+}
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
