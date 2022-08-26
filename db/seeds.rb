@@ -98,16 +98,6 @@ Destination.create!([{ name: "Chaonei No. 81",
   user_id: 1
   }])
 
-Destination.create!([{ name: "Amityville Horror House",
-  category: "Haunted Houses",
-  location: "Amityville, Long Island, New York",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
-  image: "(https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg)",
-  description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  price: 200,
-  user_id: 1
-  }])
-
 Destination.create!([{ name: "Winchester Mystery House",
   category: "Haunted Houses",
   location: "Winchester Mystery House, 525 S Winchester Blvd, San Jose, CA, USA",

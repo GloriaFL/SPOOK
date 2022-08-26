@@ -16,7 +16,7 @@ class DestinationsController < ApplicationController
     end
 
     if params[:query].present?
-      mi_sql = "name ILIKE :query OR description ILIKE :query"
+      mi_sql = "name ILIKE :query OR location ILIKE :query"
       @destinations = Destination.where(mi_sql, query: "%#{params[:query]}%")
     else
       @destinations = Destination.all
@@ -44,12 +44,12 @@ class DestinationsController < ApplicationController
     @user_booking = Booking.find_by(user: current_user, destination: @destination)
     @review = Review.new
     @booking = Booking.new
-    # @markers = @booking
-    # {
-    #   lat: flat.latitude,
-    #   lng: flat.longitude,
-    #   info_window: render_to_string(partial: "info_window", locals: {destination: destination})
-    # }
+    @markers = @destination.geocode
+    [
+      lat: @destination.latitude,
+      lng: @destination.longitude,
+      info_window: render_to_string(partial: "info_window", locals: {destination: @destination})
+    ]
   end
 
   def update

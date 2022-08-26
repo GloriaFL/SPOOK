@@ -1,8 +1,6 @@
 .container-cat-section{
-  height: 300px;
-  width: 95vw;
+  height: 450px;
   margin: 0 16px;
-  margin-bottom: 170px;
 }
 
 .categorytitle-h1 {
@@ -12,29 +10,32 @@
 }
 
 .cat-grid{
-  height:100%;
-  width: 100%;
+  height: 250px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  padding: 16px;
 }
 
 .cat-button{
   height:100%;
   width: 100%;
+  text-decoration: none;
+  color: white;
+  font-family: $text-font;
+  font-size: 26px;
+  text-shadow: 2px 2px 1px black;
   background-size: cover;
   background-position:center;
   display: grid;
   place-items: center;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+  transition: transform .2s;
 }
 
-.cat-button a{
+.cat-grid a {
   text-decoration: none;
-  color: white;
-  font-family: $text-font;
-  font-size: 26px;
-  text-shadow: 2px 2px 1px black;
+}
+.cat-grid a:hover {
+  transform: scale(1.05);
 }
