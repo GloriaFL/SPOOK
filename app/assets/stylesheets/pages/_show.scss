@@ -14,16 +14,16 @@
   justify-content: center;
   width: 80%;
   padding: 10px;
+  margin-top: 50px;
 }
 
 .container-left {
-  width: 50%;
-  margin-right: 125px;
+  width: 65%;
+  margin-right: 80px;
 }
 
 .container-right {
-  width: 50%;
-  border: 3px solid yellow;
+  width: 35%;
 }
 
 .horiz-container {
@@ -70,5 +70,62 @@
 }
 
 .container-form {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  background-color: #ededed;
+  box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 25px;
+}
+
+.date-start {
+  padding: 15px;
+  font-size: 28px;
+}
+
+select{
+  height: 40px;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 15px 0;
+  font-family: $body-font;
+}
+
+input{
+  height: 25px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 15px 0;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+
+#btn-submit{
+  background-color: $dark-purple;
+  font-family: $body-font;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+label {
+  font-family: $body-font;
+}
+
+.form-price {
+  font-family: $body-font;
+  font-size: 24px;
+}
+
+.review-form {
+  background-color: #fbfbfb;
+  margin-bottom: 60px;
+  box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 25px;
 }
