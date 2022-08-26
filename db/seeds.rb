@@ -27,7 +27,7 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
   of one of King Felipe II`s illegitimate lover, Elena. After rumors of their relationship
   began to circulate, Elena disappeared under mysterious circumstances. Today,
   the ghost of a woman bearing a striking resemblance to the Elena is often seen weaving
-  through the chimneys on the roof of the house.<br>On this tour you will learn more about
+  through the chimneys on the roof of the house. On this tour you will learn more about
   Elena and King Felipe II`s secret relationship, alleged murder, illegitimate children and
   more that haunt the walls of this Renaissance-style mansion.",
   price: 200,
