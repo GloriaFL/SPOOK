@@ -1,6 +1,7 @@
 a{
   text-decoration: none !important;
   color: black !important;
+  
 }
 .avatar-test{
   position: absolute;
@@ -25,6 +26,8 @@ a{
     width: 50px;
     height:50px;
     border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 10px;
   }
 
   /** This menu-items section will not always be visible, by default they will be hidden */
@@ -36,6 +39,7 @@ a{
   /** When the wrapper/container of the whole menu is hovered, or any element within it is hovered, then display the menu-items */
   .menu-with-icon:hover .menu-items {
     display: block;
+
   }
 
   .avatar-test:hover{
@@ -44,6 +48,7 @@ a{
     width: 180px;
     border-radius: 5px;
     padding: 0 5px;
+    opacity: 0.5;
     .menu-list-item a{
       font-family: $text-font;
     }
