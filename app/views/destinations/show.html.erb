@@ -39,7 +39,7 @@
       <div class="subheader-accent"></div>
       <h2 class="subheader-text">Location</h2>
     </div>
-    <div  class="map map-show" style="width: 500px; height: 500px;"
+    <div  class="map map-show" style="width: auto; height: 500px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
