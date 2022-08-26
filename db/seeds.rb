@@ -3,11 +3,19 @@
 #
 # Examples:
 
-# &#x1F47B is for ghost emoji
+# &#x1F47 is for ghost emoji
+
+
 
 Destination.destroy_all
 
 puts "creating seeds..."
+
+User.create([{
+  email: "falangito@hotmail.com",
+  first_name: "Don Jose Antonio",
+  last_name: "Primo de Rivera"
+}])
 
 Destination.create!([{ name: "Casa de los Siete Chimeneas",
   category: "Haunted Houses",
