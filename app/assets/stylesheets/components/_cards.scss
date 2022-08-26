@@ -4,6 +4,8 @@
   justify-content: center;
   flex-direction: column;
   padding-top: 60px;
+  width: 90%;
+  margin: auto;
   // height: 1200px;
 }
 
@@ -12,17 +14,17 @@
   height: auto;
   margin: auto;
   justify-content: center;
-  width: 95%;
+  width: 90%;
   padding: 10px;
 }
 
 .index-container-left {
-  width: 60%;
+  width: 70%;
   margin-right: 60px;
 }
 
 .index-container-right {
-  width: 40%;
+  width: 30%;
 }
 
 .cards {
@@ -55,7 +57,7 @@
   text-decoration: none;
   color: $dark-grey;
   margin: none;
-  line-height: 1rem;
+  line-height: 1.6rem;
 
   a, h3 {
     margin: 0, 0;
@@ -113,6 +115,10 @@
 .categories-container p {
   margin: 5px;
 }
+
+.destinations-title {
+  padding-bottom: 20px;
+}
 // #overlay {
 //   position: fixed; /* Sit on top of the page content */
 //   display: none; /* Hidden by default */
@@ -126,4 +132,3 @@
 //   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 //   cursor: pointer; /* Add a pointer on hover */
 // }
-
