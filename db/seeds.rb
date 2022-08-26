@@ -17,6 +17,34 @@ User.create([{
   last_name: "Primo de Rivera"
 }])
 
+Destination.create!([{ name: "Wycliffe Well",
+  category: "UFOs",
+  location: "Wycliffe Well, Australia",
+  intensity: "&#x1F47B &#x1F47B",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/UFO_Landing_Site.jpg/350px-UFO_Landing_Site.jpg",
+  description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  price: 900,
+  user_id: 1
+  }])
+
+  Destination.create!([{ name: "Amityville Horror House",
+    category: "Haunted Houses",
+    location: "Amityville, Long Island, New York",
+    intensity: "&#x1F47B &#x1F47B &#x1F47B",
+    image: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg",
+    description: "After a man killed six members of his family in this house in 1974,
+    the killer claimed to be lured to do so by evil spirits in the house. The house
+    has been sold to multiple owners between the time of the killings and today, without any
+    long-term permanent residents. Each owner claims that the house is unlivable due to
+    paranormal activity with reports doors opening and closing on their own,
+    knives found in odd places, children screaming and even people levitating in their sleep.
+    <br>Was the killer really being controlled by evil spirits? Why can`t anyone remain
+    living in this house since this event? Come see for yourself what is hidden behind the
+    walls of this seemingly typical Long Island suburban home.",
+    price: 200,
+    user_id: 1
+    }])
+
 Destination.create!([{ name: "Casa de los Siete Chimeneas",
   category: "Haunted Houses",
   location: "Madrid, Spain",
@@ -30,24 +58,6 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
   through the chimneys on the roof of the house. On this tour you will learn more about
   Elena and King Felipe II`s secret relationship, alleged murder, illegitimate children and
   more that haunt the walls of this Renaissance-style mansion.",
-  price: 200,
-  user_id: 1
-  }])
-
-Destination.create!([{ name: "Amityville Horror House",
-  category: "Haunted Houses",
-  location: "Amityville, Long Island, New York",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
-  image: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/M6PH5GVIBZBGBFGICKJKCWJESU.jpg",
-  description: "After a man killed six members of his family in this house in 1974,
-  the killer claimed to be lured to do so by evil spirits in the house. The house
-  has been sold to multiple owners between the time of the killings and today, without any
-  long-term permanent residents. Each owner claims that the house is unlivable due to
-  paranormal activity with reports doors opening and closing on their own,
-  knives found in odd places, children screaming and even people levitating in their sleep.
-  <br>Was the killer really being controlled by evil spirits? Why can`t anyone remain
-  living in this house since this event? Come see for yourself what is hidden behind the
-  walls of this seemingly typical Long Island suburban home.",
   price: 200,
   user_id: 1
   }])
@@ -99,7 +109,7 @@ Destination.create!([{ name: "Casa Lercaro",
 Destination.create!([{ name: "Chaonei No. 81",
   category: "Haunted Houses",
   location: "Beijing, China",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B",
   image: "https://cdn.cnn.com/cnnnext/dam/assets/131029211900-huanted-house-picture-1.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
@@ -169,7 +179,7 @@ Destination.create!([{ name: "Hotel Chelsea",
 Destination.create!([{ name: "Hotel del Salto",
   category: "Hotels",
   location: "San Antonio del Tequendama, Colombia",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B",
   image: "https://i.pinimg.com/originals/ae/c6/9d/aec69d7cb87e95a2a11b26b9455d94ab.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 500,
@@ -270,7 +280,7 @@ Destination.create!([{ name: "The Separate Prison",
 Destination.create!([{ name: "West Virginia Penitentiary",
   category: "Prisons",
   location: "Moundsville, West Virginia",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B",
   image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/West_Virginia_State_Penitentiary%2C_Moundsville%2C_WV.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
@@ -350,7 +360,7 @@ Destination.create!([{ name: "Ancient Ram Inn",
 Destination.create!([{ name: "Hoia Baciu Forest",
     category: "UFOs",
     location: "Hoia Forest, Romania",
-    intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+    intensity: "&#x1F47B &#x1F47B &#x1F47B",
     image: "https://mybestplace.com/uploads/2017/10/Hoia-Baciu-Forest-Romania-2.jpg",
     description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     price: 500,
@@ -367,16 +377,6 @@ Destination.create!([{ name: "Nazca Lines",
   user_id: 1
   }])
 
-  Destination.create!([{ name: "Wycliffe Well",
-    category: "UFOs",
-    location: "Wycliffe Well, Australia",
-    intensity: "&#x1F47B &#x1F47B",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/UFO_Landing_Site.jpg/350px-UFO_Landing_Site.jpg",
-    description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    price: 900,
-    user_id: 1
-    }])
-
 Destination.create!([{ name: "Varginha",
   category: "UFOs",
   location: "Varginha, Brazil",
@@ -390,7 +390,7 @@ Destination.create!([{ name: "Varginha",
 Destination.create!([{ name: "Roswell",
   category: "UFOs",
   location: "Roswell, New Mexico, United States",
-  intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
+  intensity: "&#x1F47B &#x1F47B &#x1F47B",
   image: "https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3ODc3NjU4NjM1Njc1MzU5/this-day-in-history-06241997--air-force-report-on-roswell.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 4000,
