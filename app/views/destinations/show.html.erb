@@ -56,7 +56,7 @@
     <% end %>
   </div>
   <h5>Add your review</h5>
-  <% if @booking%>
+  <% if @user_booking%>
     <%= simple_form_for [@user_booking, @review] do |f|%>
       <%= f.input :content %>
       <%= f.input :rating %>
