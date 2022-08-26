@@ -1,12 +1,14 @@
 <%= render "shared/avatar" %>
 <div class="destinations-main-container">
-  <h1>Destination page</h1>
-  <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
+  <h1 class="dest-title">Destinations</h1>
+  <div class="search-dest">
+    <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "form-control-dest",
       placeholder: "Find a destination" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+      <%= submit_tag "🔍", class: "btn btn-primary" %>
+    <% end %>
+
   <%= render "shared/destination-cards" %>
 </div>

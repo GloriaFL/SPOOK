@@ -3,15 +3,23 @@
 #
 # Examples:
 
-# &#x1F47B is for ghost emoji
+# &#x1F47 is for ghost emoji
+
+
 
 Destination.destroy_all
 
 puts "creating seeds..."
 
+User.create([{
+  email: "falangito@hotmail.com",
+  first_name: "Don Jose Antonio",
+  last_name: "Primo de Rivera"
+}])
+
 Destination.create!([{ name: "Casa de los Siete Chimeneas",
   category: "Haunted Houses",
-  location: "Pl. del Rey, 1, 28004 Madrid",
+  location: "Madrid, Spain",
   intensity: "&#x1F47B &#x1F47B &#x1F47B",
   image: "https://static.abc.es/Media/201412/10/casa--644x362.jpg",
   description: "Located in the center of Madrid, this 16th century mansion, known for it`s
@@ -19,7 +27,7 @@ Destination.create!([{ name: "Casa de los Siete Chimeneas",
   of one of King Felipe II`s illegitimate lover, Elena. After rumors of their relationship
   began to circulate, Elena disappeared under mysterious circumstances. Today,
   the ghost of a woman bearing a striking resemblance to the Elena is often seen weaving
-  through the chimneys on the roof of the house.<br>On this tour you will learn more about
+  through the chimneys on the roof of the house. On this tour you will learn more about
   Elena and King Felipe II`s secret relationship, alleged murder, illegitimate children and
   more that haunt the walls of this Renaissance-style mansion.",
   price: 200,
@@ -46,7 +54,7 @@ Destination.create!([{ name: "Amityville Horror House",
 
 Destination.create!([{ name: "Rose Hall",
   category: "Haunted Houses",
-  location: "Rose Hall, Montego Bay, Jamaica",
+  location: "Montego Bay, Jamaica",
   intensity: "&#x1F47B &#x1F47B &#x1F47B",
   image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jamaica/JF_JAM13_ROSEHALL_0199_d4a484f1-5056-a36a-0704cc58d453753b.jpg",
   description: "Haunted by the former owner's wife, Annie Palmer, who allegedly murdered
@@ -70,7 +78,7 @@ Destination.create!([{ name: "Monte Cristo Homestead",
 
 Destination.create!([{ name: "Foxwood House",
   category: "Haunted Houses",
-  location: "Foxwood House, 13 5th St, Johannesburg, South Africa",
+  location: "Johannesburg, South Africa",
   intensity: "&#x1F47B &#x1F47B",
   image: "https://media-cdn.tripadvisor.com/media/photo-s/02/9a/dc/c7/filename-foxwoos-house.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -90,9 +98,9 @@ Destination.create!([{ name: "Casa Lercaro",
 
 Destination.create!([{ name: "Chaonei No. 81",
   category: "Haunted Houses",
-  location: "81 Chaoyangmen Inner Street, Dongcheng District, Beijing, China",
+  location: "Beijing, China",
   intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
-  image: "(https://phantom-elmundo.unidadeditorial.es/5f3f3bd42025777361dbe51821500846/resize/828/f/jpg/assets/multimedia/imagenes/2022/08/20/16609477838666.jpg)",
+  image: "https://cdn.cnn.com/cnnnext/dam/assets/131029211900-huanted-house-picture-1.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
   user_id: 1
@@ -100,7 +108,7 @@ Destination.create!([{ name: "Chaonei No. 81",
 
 Destination.create!([{ name: "Winchester Mystery House",
   category: "Haunted Houses",
-  location: "Winchester Mystery House, 525 S Winchester Blvd, San Jose, CA, USA",
+  location: "San Jose, California, USA",
   intensity: "&#x1F47B &#x1F47B",
   image: "https://s.hdnux.com/photos/01/12/13/74/19447552/3/1200x0.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -110,7 +118,7 @@ Destination.create!([{ name: "Winchester Mystery House",
 
 Destination.create!([{ name: "Treasurers House",
   category: "Haunted Houses",
-  location: "Treasurers House, Minster Yard, York, UK,",
+  location: "Minster Yard, York, UK,",
   intensity: "&#x1F47B &#x1F47B",
   image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/The_Treasurer%27s_House1.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -130,7 +138,7 @@ Destination.create!([{ name: "Parador de Jaen",
 
 Destination.create!([{ name: "The Jefferson Hotel",
   category: "Hotels",
-  location: "Richond, Virginia, United States",
+  location: "Richmond, Virginia, United States",
   intensity: "&#x1F47B &#x1F47B",
   image: "http://www.nevistas.com/ul/4/2016/01/05/06.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -168,7 +176,7 @@ Destination.create!([{ name: "Hotel del Salto",
   user_id: 1
   }])
 
-Destination.create!([{ name: "Alcatraz Federal Penitentiary",
+Destination.create!([{ name: "Alcatraz Federal Prison",
   category: "Prisons",
   location: "San Francisco, California, United States",
   intensity: "&#x1F47B &#x1F47B",
@@ -281,7 +289,7 @@ Destination.create!([{ name: "West Virginia Penitentiary",
 
 Destination.create!([{ name: "Casa de la Poesia",
   category: "Haunted Houses",
-  location: "Bogata, Colombia",
+  location: "Bogota, Colombia",
   intensity: "&#x1F47B",
   image: "https://diariolaeconomia.com/media/k2/items/cache/3b04befec86798a8e7e4cdffa435f27c_XL.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -351,7 +359,7 @@ Destination.create!([{ name: "Hoia Baciu Forest",
 
 Destination.create!([{ name: "Nazca Lines",
   category: "UFOs",
-  location: "8V6G+JQM, Estudiantes 11350, Peru",
+  location: "Nazca Lines, Peru",
   intensity: "&#x1F47B",
   image: "https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc5MDg3MjM4ODE3MDk3/peru-nazca-lines-spider.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",

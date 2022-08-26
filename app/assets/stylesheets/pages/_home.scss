@@ -7,7 +7,7 @@
 
 .home-card-container{
   height: 1350px;
-  margin: 0 16px;
+  margin: 0 30px;
 }
 
 .home-card-container h1{
@@ -24,6 +24,6 @@
   font-family: $text-font;
 }
 
-.image-card{
+.image-card {
   filter: grayscale(0.9) contrast(0.9);
 }

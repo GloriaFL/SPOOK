@@ -1,9 +1,5 @@
+
 <%= render "shared/avatar" %>
-<h2>----------------------</h2>
-<h2>----------------------</h2>
-<h2>----------------------</h2>
-<h2>----------------------</h2>
-<h2>----------------------</h2>
 
 <div class="show-container">
   <div class="container-left">
@@ -16,7 +12,7 @@
         <%= @destination.category %>
       </div>
     </div>
-    <img class="image-show" src="<%= @destination.image%>" alt="">
+    <img class="image-show image-card" src="<%= @destination.image%>" alt="">
     <div class="horiz-container">
       <div class="subheader-accent"></div>
       <h2 class="subheader-text">Overview</h2>
@@ -26,14 +22,34 @@
       <div class="subheader-accent"></div>
       <h2 class="subheader-text">Reviews</h2>
     </div>
-  </div>
+    <% @destination.reviews.each do |review| %>
+      <p class="review-card">"<%= review.content %>"</p>
+    <% end %>
+    <div class="review-form">
+        <div>
+          <% if !@user_booking %>
+            Create a booking in order to add a review
+          <% elsif @destination.reviews.blank? %>
+            <h5>Add your review</h5>
+            <%= simple_form_for [@user_booking, @review] do |f|%>
+              <%= f.input :content %>
+              <%= f.input :rating %>
+              <%= f.button :submit, id:"btn-submit" %>
+            <% end %>
+          <% else %>
+            Thanks for leaving a review
+          <% end %>
+        </div>
+      </div>
+    </div>
   <div class="container-right">
     <div class="container-form">
       <%= simple_form_for [@destination, @booking] do |f| %>
-        <%= f.input :date_start %>
+        <h3 class="form-price"><strong>$<%= @destination.price %>/night</strong></h3>
+        <%= f.input :date_start, :label=>"Date start", id:"date-start" %>
         <%= f.input :date_end %>
         <%= f.input :number_people %>
-        <%= f.submit %>
+        <%= f.submit id:"btn-submit"%>
       <% end %>
     </div>
     <div class="horiz-container">
@@ -49,30 +65,4 @@
 
 </div>
 
-<h3>Reviews</h3>
-<div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
-  <div data-insert-in-list-target="items">
-    <% if @destination.reviews.blank? %>
-      Be the first to leave a review for <%= @destination.name %>
-    <% else %>
-      <% @destination.reviews.each do |review| %>
-        <p><%= review.content %></p>
-      <% end %>
-    <% end %>
-  </div>
-  <h5>Add your review</h5>
-  <% if @user_booking%>
-    <%= simple_form_for [@user_booking, @review] do |f|%>
-      <%= f.input :content %>
-      <%= f.input :rating %>
-      <%= f.button :submit %>
-    <% end %>
-  <% end %>
-</div>
-
-<%= link_to "Delete",
-    destination_path(@destination),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-<%= link_to "Edit", edit_destination_path(@destination) %>
 <%= link_to "Back to all destinations", destinations_path %>
