@@ -1,14 +1,43 @@
-<h1>This is our profile page</h1>
-<div class="cards">
-  <% @bookings.each do |booking| %>
-    <ul class="card-trip">
-      <li><%= booking.number_people %></li>
-      <% destination = Destination.find(booking.destination_id) %>
-      <li><%= destination.name %></li>
-      <li><%= destination.price %></li>
-      <li><%= destination.location %></li>
-      <li><%= destination.category %></li>
-      <li><%= destination.intensity%></li>
-    </ul>
-  <% end %>
+<div class="profile-container">
+  <div class="header-profile">
+    <img src="/assets/profile.jpg" width="150" height="150" class="avatar-profile"/>
+    <h1><%= "#{current_user.first_name} #{current_user.last_name}" %></h1>
+    <h1><%= "#{current_user.email}" %></h1>
+  </div>
+
+  <div class="home-bottom-container">
+    <a href= "<%= root_path  %>"><img src="/assets/home.png" alt="" class="home-bottom"></a>
+  </div>
+
+  <div class="container">
+    <div class="destinations-main-container">
+    <h1>Here are your bookings</h1>
+      <div class="cards">
+        <% @bookings.each do |booking| %>
+          <div class="container-card">
+            <img class="image-card" id="overlay" src="<%= booking.destination.image%>" alt="">
+            <div class="card-information">
+              <div class="text-container">
+                <h3 class="title-card" ><%= booking.destination.name %> </h3>
+                <p class="text-card" ><%= booking.destination.location %></p>
+                <p class="text-card" ><strong>$<%= booking.destination.price * booking.number_people %></strong> <%= "Price for: #{booking.number_people} people" %> </p>
+                <p><%= "From #{booking.date_start} to #{booking.date_end}" %></p>
+              </div>
+              <div class="categories-container">
+                <div class="intensity-card">
+                  <p class="text-card categories"><%= sanitize booking.destination.intensity %> </p>
+                </div>
+                <div class="categories-card">
+                  <p class="text-card categories"><%= booking.destination.category %> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <h2><%= link_to "Create destination", new_destination_path %></h2>
+
 </div>
