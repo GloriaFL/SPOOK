@@ -30,8 +30,12 @@
   place-items: center;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+  transition: transform .2s;
 }
 
 .cat-grid a {
   text-decoration: none;
+}
+.cat-grid a:hover {
+  transform: scale(1.05);
 }
