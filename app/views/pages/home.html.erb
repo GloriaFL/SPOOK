@@ -8,4 +8,32 @@
 <%= render "shared/avatar" %>
 <%= render "shared/banner" %>
 <%= render "shared/category-card" %>
-<%= render "shared/destination-cards" %>
+
+<div class="home-card-container">
+    <h1>Your spooky selection</h1>
+    <div class="home-cards-grid">
+        <% #[@destinations[0], @destinations[3]].each do |destination| %>
+        <% @destinations.slice(0,8).each do |destination| %>
+          <div class="container-card">
+            <img class="image-card" src="<%= destination.image %>" alt="">
+            <div class="card-information">
+              <div class="text-container">
+                <h3><%= link_to destination.name, destination_path(destination), class: "title-card" %> </h3>
+                <p><%= link_to destination.location, destination_path(destination), class: "text-card" %></p>
+                <p><strong>$<%= link_to destination.price, destination_path(destination), class: "text-card" %></strong></p>
+              </div>
+              <div class="categories-container">
+                <div class="intensity-card">
+                  <%= link_to destination_path(destination), class: "text-card categories" do %>
+                    <%= sanitize destination.intensity %>
+                  <% end %>
+                </div>
+                <div class="categories-card">
+                  <%= link_to destination.category, destination_path(destination), class: "text-card categories" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+    </div>
+</div>
