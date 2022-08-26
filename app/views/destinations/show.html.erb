@@ -48,7 +48,7 @@
 
 </div>
 
-<h3>Reviews</h3>
+<h2>Reviews</h2>
 <div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
   <div data-insert-in-list-target="items">
     <% if @destination.reviews.blank? %>
@@ -59,7 +59,7 @@
       <% end %>
     <% end %>
   </div>
-  <h5>Add your review</h5>
+  <h4>Add your review</h4>
   <% if @user_booking%>
     <%= simple_form_for [@user_booking, @review] do |f|%>
       <%= f.input :content %>
