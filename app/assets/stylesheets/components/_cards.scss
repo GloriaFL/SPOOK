@@ -1,9 +1,10 @@
-.main-container {
+.destinations-main-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 40px;
+  padding-top: 140px;
+  border: 3px solid green;
   // height: 1200px;
 }
 
@@ -15,9 +16,10 @@
 
 .container-card {
   width: 100%;
-  height: 600px;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .card-information {
@@ -26,6 +28,7 @@
 
 .image-card {
   width: 100%;
+  height: 300px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -82,3 +85,24 @@
   padding: 5px 15px;
   margin-left: 15px;
 }
+
+.cards a {
+  text-decoration: none;
+}
+
+.categories-container p {
+  margin: 5px;
+}
+// #overlay {
+//   position: fixed; /* Sit on top of the page content */
+//   display: none; /* Hidden by default */
+//   width: 100%; /* Full width (cover the whole page) */
+//   height: 100%; /* Full height (cover the whole page) */
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+//   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+//   cursor: pointer; /* Add a pointer on hover */
+// }
