@@ -1,11 +1,22 @@
 <div class="destinations-main-container">
   <h1>Destination page</h1>
   <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a destination" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-  <%= render "shared/destination-cards" %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a destination" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+</div>
+<div class="index-page-main-container">
+  <div class="index-container-left">
+    <%= render "shared/destination-cards" %>
+  </div>
+  <div class="index-container-right">
+    <div  class="map map-show" style="width: auto; height: 800px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 </div>
