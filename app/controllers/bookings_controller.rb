@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find_by(destination: @destination, user: current_user)
     @booking.update(booking_params)
     redirect_to profile_path(@booking)
   end
