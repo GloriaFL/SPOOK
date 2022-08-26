@@ -1,12 +1,14 @@
 <div class="destinations-main-container">
-  <h1 class="destinations-title">Destinations</h1>
+<h1 class="dest-title">Destinations</h1>
+<div class="search-dest">
   <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
+    class: "form-control-dest",
     placeholder: "Find a destination" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "🔍", class: "btn btn-primary" %>
   <% end %>
+  </div>
   <div class="cards">
     <% @destinations.each do |destination| %>
       <%= link_to destination_path(destination) do %>
