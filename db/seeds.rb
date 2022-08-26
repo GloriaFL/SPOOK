@@ -14,7 +14,8 @@ puts "creating seeds..."
 User.create([{
   email: "falangito@hotmail.com",
   first_name: "Don Jose Antonio",
-  last_name: "Primo de Rivera"
+  last_name: "Primo de Rivera",
+  password: "123456"
 }])
 
 Destination.create!([{ name: "Casa de los Siete Chimeneas",
