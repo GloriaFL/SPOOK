@@ -92,7 +92,7 @@ Destination.create!([{ name: "Chaonei No. 81",
   category: "Haunted Houses",
   location: "81 Chaoyangmen Inner Street, Dongcheng District, Beijing, China",
   intensity: "&#x1F47B &#x1F47B &#x1F47B &#x1F47B",
-  image: "(https://phantom-elmundo.unidadeditorial.es/5f3f3bd42025777361dbe51821500846/resize/828/f/jpg/assets/multimedia/imagenes/2022/08/20/16609477838666.jpg)",
+  image: "https://cdn.cnn.com/cnnnext/dam/assets/131029211900-huanted-house-picture-1.jpg",
   description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   price: 200,
   user_id: 1
