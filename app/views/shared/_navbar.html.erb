@@ -1,11 +1,11 @@
-<nav class="home-nav">
+<%# <%# <nav class="home-nav">
   <div class="container-house">
     <a href="http://localhost:3000/"><img src="https://res.cloudinary.com/dlanz/image/upload/v1661245369/lewagon/gfexf3hjjqerb3jzoyfv.png" alt="House Logo" class="logo"></a>
   </div>
 
   <ul class="home-nav-list">
-    <li class="list-item"><%= link_to "Home", root_path %></li>
-    <li class="list-item">Search</li>
+    <li class="list-item"><%= link_to "Home", root_path %><%#</li> %>
+    <%# <li class="list-item">Search</li>
     <li class="list-item">Bookings</li>
   </ul>
 
@@ -13,10 +13,10 @@
 
   <div class="buttons">
     <% if !user_signed_in? %>
-      <button class="sign-log-btn"><%= link_to "Sign up", new_user_registration_path %></button>
-      <button class="sign-log-btn"><%= link_to "Log in", user_session_path %></button>
-    <% else %>
-      <button class="sign-log-btn logged-out"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}%></button>
-    <% end %>
-  </div>
-</nav>
+      <%# <button class="sign-log-btn"><%= link_to "Sign up", new_user_registration_path %></button>
+      <%# <button class="sign-log-btn"><%= link_to "Log in", user_session_path %></button>
+    <%# <% else %>
+<%#       <button class="sign-log-btn logged-out"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}%></button>
+    <%#<% end %>
+  <%#</div>
+<%#</nav> %>

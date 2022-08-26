@@ -1,11 +1,86 @@
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  z-index: 1000;
-  vertical-align: middle;
-  border-color: blue;
-  position: absolute;
-  top:0px;
-  right:0px;
+a{
+  text-decoration: none !important;
+  color: black !important;
 }
+.avatar-test{
+  position: absolute;
+  z-index: 90;
+  top: 0;
+  right: 0;
+}
+
+.menu-with-icon {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    top:0px;
+    right:0px;
+
+  }
+
+  .always-visible {
+    /** whatever you want here */
+    z-index: 9;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+  }
+
+  /** This menu-items section will not always be visible, by default they will be hidden */
+  .menu-items {
+    display: none;
+    list-style: none;
+  }
+
+  /** When the wrapper/container of the whole menu is hovered, or any element within it is hovered, then display the menu-items */
+  .menu-with-icon:hover .menu-items {
+    display: block;
+  }
+
+  .avatar-test:hover{
+    background-color: white;
+    height: 200px;
+    width: 180px;
+    border-radius: 5px;
+    padding: 0 5px;
+    .menu-list-item a{
+      font-family: $text-font;
+    }
+    .item-list-drop{
+
+      list-style: none;
+    }
+  }
+
+//---------------------------------------------------//
+// .avatar-dropdown {
+//   position: relative;
+//   display: inline-block;
+// }
+
+// .avatar-dropdown-content {
+//   display: none;
+//   position: absolute;
+//   background-color: #f9f9f9;
+//   min-width: 160px;
+//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//   padding: 12px 16px;
+//   z-index: 1;
+// }
+
+// .avatar-dropdown:hover .dropdown-content {
+//   display: block;
+// }
+
+// .avatar-dropdown {
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+//   z-index: 1000;
+//   vertical-align: middle;
+//   border-color: blue;
+//   position: absolute;
+//   top:0px;
+//   right:0px;
+// }
