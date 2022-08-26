@@ -44,12 +44,13 @@ class DestinationsController < ApplicationController
     @user_booking = Booking.find_by(user: current_user, destination: @destination)
     @review = Review.new
     @booking = Booking.new
-    @markers = @destination.geocode
-    [
+    @markers =
+    [{
       lat: @destination.latitude,
       lng: @destination.longitude,
-      info_window: render_to_string(partial: "info_window", locals: {destination: @destination})
-    ]
+      info_window: render_to_string(partial: "info_window", locals: {destination: @destination}),
+      image_url: helpers.asset_url("haunted_house.png")
+    }]
   end
 
   def update
