@@ -4,6 +4,7 @@
   <%= f.input :price %>
   <%= f.input :location %>
   <%= f.select :category, collection: ['Haunted Houses', 'UFOs', 'Cementeries', 'Islands', 'Ghosts', 'Prisons', 'Castles', 'Hotels']%>
-  <%=f.select :intensity, collection: ["👻", "👻 👻", "👻 👻 👻", "👻 👻 👻 👻"] %>
+  <%= f.select :intensity, collection: ["👻", "👻 👻", "👻 👻 👻", "👻 👻 👻 👻"] %>
+  <%= f.input :image, placeholder: "Url image" %>
   <%= f.submit %>
 <% end %>
