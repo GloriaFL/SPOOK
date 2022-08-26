@@ -1,4 +1,4 @@
-.banner {
+.banner-showpage {
   background-image: url("roswell");
   background-size: cover;
   background-position: cover;
@@ -53,13 +53,24 @@
   padding: 20px 5px;
 }
 
-.overview-text {
+.show-text {
   font-family: $text-font;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .subheader-text {
   margin: 0;
   margin-left: 10px;
   font-family: $subheader-font;
+  font-size: 32px;
+}
+
+.map-show {
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.container-form {
+  margin-bottom: 20px;
 }
