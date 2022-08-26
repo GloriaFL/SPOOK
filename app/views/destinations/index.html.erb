@@ -1,11 +1,13 @@
 <div class="destinations-main-container">
-  <h1 class="destinations-title">Destinations</h1>
-  <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a destination" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+  <h1 class="dest-title">Destinations</h1>
+  <div class="search-dest">
+    <%= form_with url: destinations_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control-dest",
+      placeholder: "Find a destination" %>
+      <%= submit_tag "🔍", class: "btn btn-primary" %>
+    <% end %>
+
   <%= render "shared/destination-cards" %>
 </div>
